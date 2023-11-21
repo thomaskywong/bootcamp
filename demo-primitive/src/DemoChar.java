@@ -14,8 +14,8 @@ public class DemoChar {
 
     System.out.println(c5);
 
-    char c7 = 3;
-    System.out.println(c7);
+    char c7 = 3;          // some character with ASCII value 3
+    System.out.println(c7);     
 
   }
   

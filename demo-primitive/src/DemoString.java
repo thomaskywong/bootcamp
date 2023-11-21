@@ -26,9 +26,11 @@ public class DemoString {
     System.out.println(str1.length());          // length of the string object
     System.out.println(str1.equals("hello"));   // check if str1 is "hello"
     str1 = str1 + " world";                     // concatenation
-    System.out.println(str1);
-    str1 += str1;                               // concatenation
+    System.out.println(str1);                   // "hello world"
+    str1 += " Thomas";                          // concatenation
     System.out.println(str1);   
+
+    // +=, +  
 
   }
 }

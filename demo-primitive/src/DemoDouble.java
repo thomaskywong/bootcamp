@@ -26,7 +26,7 @@ public class DemoDouble {
     //float f1 = 0.3;                 // no impleciitly down cast to float from double. 0.3 is double by default
     float f2 = 0.3f;                  
 
-    float f4 = (float) d5;            // 199999.12
+    float f4 = (float) d5;            // 199999.12    float type has 16 bits only. store value within 16 bit
     System.out.println(f4);
   }
   
