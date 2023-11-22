@@ -72,15 +72,22 @@ public class DemoInt {
 
         result = k--;        // k-1
         System.out.println("k--: " + result);        // show k first, then k = k-1, = 10
+        System.out.println("k: " +k);                 // k = 9
 
         result = --k;        // k-1
         System.out.println("--k: " + result);        // k = k-1 first, then show k, = 8
+        System.out.println("k: " +k);                 // k = 8
+
 
         result = k++;        // k++        
         System.out.println("k++: " + result);        // show k first, then k = k + 1,  = 8
+        System.out.println("k: " +k);                 // k = 9
+
 
         result = ++k;        // k+1                 // k = k + 1 first, then show k,  = 10
         System.out.println("++k: " + result);
+        System.out.println("k: " +k);                 // k = 10
+
 
         int m = 17 % 3;     // 10 modulus 3 = remainder of 10 / 3 = 1
         System.out.println(m);
