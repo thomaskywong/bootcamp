@@ -149,9 +149,6 @@ public class DemoOperator {
       else {
           System.out.println("no");
       }
-      
-
-
 
   }
   
