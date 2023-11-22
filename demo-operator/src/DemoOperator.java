@@ -113,8 +113,7 @@ public class DemoOperator {
       if ( c == 1 || b == 4 && "hello".equals(str)) {
         // && operator has higher priority than ||
         // b == 4 -> false
-        // "hello".equals(str) -> true
-        // b == 4 && "hello".equals(str) -> false && true -> false
+        // && hello".equals(str) will not be executed
         // c == 2 -> true
         // true || false -> true
           System.out.println("yes");
@@ -128,8 +127,7 @@ public class DemoOperator {
       if ( c == 2 || b == 4 && "hello".equals(str)) {
         // && operator has higher priority than ||
         // b == 4 -> false
-        // "hello".equals(str) -> true
-        // b == 4 && "hello".equals(str) -> false && true -> false
+        // && hello".equals(str) will not be executed
         // c == 2 -> false
         // false || false -> false
           System.out.println("yes");
@@ -137,6 +135,23 @@ public class DemoOperator {
       else {
           System.out.println("no");
       }
+
+      String h = "Hello";
+      b = 6;
+      System.out.println(h); // h = "Hello"
+      // h.charAt(3) is 'l' 
+      // h.charAt(3) == 'e' is false
+      // b == 6 is true
+      // false || true -> true
+      if (h.charAt(3) == 'e' || b == 6) {
+          System.out.println("yes");
+      }
+      else {
+          System.out.println("no");
+      }
+      
+
+
 
   }
   
