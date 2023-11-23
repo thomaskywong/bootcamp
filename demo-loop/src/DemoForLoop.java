@@ -86,6 +86,7 @@ public class DemoForLoop {
         System.out.println("sum = " + sum);
 
         System.out.println();
+        
         // break
         // exit from loop if the condition is fulfilled
         // 1. sum up all odd number (0-100)
