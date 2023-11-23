@@ -1,34 +1,54 @@
 /**
  * Expected Output:
  * 
- * a > 9 str length < 27 2020 is a leap year. 2400 is a leap year.
+ * a > 9 
+ * str length < 27 
+ * 2020 is a leap year. 
+ * 2400 is a leap year.
  */
 // Primitive types and operators
 public class JavaQuest2 {
   public static void main(String[] args) {
     int a = 10;
     int b = 3 * a % 3;
-    if (a == 9) {
-      System.out.println("a is equals to 9");
-    } else if (a < 9 && a >= 0) {
-      System.out.println("a is between 0 and 8");
-      // code here
-    } else if (a < 0) {
+    
+    if (a < 0)
       System.out.println("a < 0");
-    } else {
+    else if (a < 9)
+      System.out.println("a is between 0 and 8");
+    else if (a == 9)
+      System.out.println("a is equals to 9");
+    else
       System.out.println("a > 9");
-    }
+
+    // if (a == 9) 
+    //   System.out.println("a is equals to 9");
+    // } else if (a < 9 && a >= 0) {
+    //   System.out.println("a is between 0 and 8");
+    //   // code here
+    // } else if (a < 0) {
+    //   System.out.println("a < 0");
+    // } else {
+    //   System.out.println("a > 9");
+    // }>
 
 
     String str = "I love Java. I love coding";
     // System.out.println(str.length());
-    if ((str.length() == 27)) { // code here. Fix the bug.
-      System.out.println("str length=27");
-    } else if (str.length() < 27) { // add the condition
+    if (str.length() < 27)
       System.out.println("str length < 27");
-    } else { // complete the code
+    else if (str.length() == 27)
+      System.out.println("str length = 27");
+    else
       System.out.println("str length > 27");
-    }
+      
+    // if ((str.length() == 27)) { // code here. Fix the bug.
+    //   System.out.println("str length=27");
+    // } else if (str.length() < 27) { // add the condition
+    //   System.out.println("str length < 27");
+    // } else { // complete the code
+    //   System.out.println("str length > 27");
+    // }
 
     // Question : Determine whether year n is a leap year.
     /*
