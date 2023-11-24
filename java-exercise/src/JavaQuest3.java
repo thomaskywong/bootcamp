@@ -40,15 +40,23 @@ public class JavaQuest3 {
             .println("Invalid input! Please enter integer between 1 and 12.");
     }
 
-    System.out.print("Input a year: ");
-    int year = input.nextInt();
-
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-      isHeapYear = true;
+    int year = 0;
+    while (true) {
+      System.out.print("Input a year: ");
+      year = input.nextInt();
+      if (year > 0)
+        break;
+      else
+        System.out
+            .println("Invalid input! Please enter integer greater than 0.");
     }
 
-    // Complete the switch statement
-    switch (month) {
+   if((year%4==0&&year%100!=0)||year%400==0)
+      isHeapYear = true;
+
+  // Complete the switch statement
+  switch(month)
+  {
       case 1:
         MonthOfName = "January";
         number_Of_DaysInMonth = DAY_OF_MONTH_NON_HEAP_YEAR[month - 1];
@@ -105,8 +113,6 @@ public class JavaQuest3 {
 
     }
 
-    System.out.print(
-        MonthOfName + " " + year + " has " + number_Of_DaysInMonth + " days\n");
+  System.out.print(MonthOfName+" "+year+" has "+number_Of_DaysInMonth+" days\n");
 
-  }
-}
+}}
