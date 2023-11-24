@@ -99,13 +99,12 @@ public class DemoForLoop {
             // sum3 += i // cannot put summation action here, since sum3 + i may exceeds 200 before checking condition!
             if (i%2 == 0)           // skip all even number
                 continue;
-            if (sum3 + i <= 200) {
+            if (sum3 + i <= 200) {      // check if overflow before proceeding summation and record i counter
                 sum3 += i;
                 count = i;
+                System.out.println("i = " + i + "; sum3 = " + sum3);
             } else 
                 break;
-            
-            System.out.println("i = " + i + "; sum3 = " + sum3);
         }
         System.out.println("Final value: i = " + count + " sum3 = " + sum3);
         System.out.println();
