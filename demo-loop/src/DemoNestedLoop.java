@@ -96,13 +96,67 @@ public class DemoNestedLoop {
     // since there is no row and column concept, nested loop is not a must
 
     for (int i = 0; i < string1.length(); i++) {
-        System.out.print(string1.charAt(i));
-        if ( (i+1)%4 == 0 && i != 0) {
-          System.out.println();
-          continue;
-        }
+      System.out.print(string1.charAt(i));
+      if ((i + 1) % 4 == 0 && i != 0 || i == string1.length() - 1) {
+        System.out.println();
+      }
+    }
+
+    System.out.println();
+    //
+    int count = 0;
+    for (int i = 0; i < string1.length(); i++) {
+      System.out.print(string1.charAt(i));
+      if (++count % 4 == 0 || i == string1.length() - 1) {
+        System.out.println();
+      }
+    }
+
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 3; j++) {
+
+      }
+    }
+
+    System.out.println();
+
+    // two pattern example
+    // *** *** *** *** *** ***
+    // pattern 1: 6 groups
+    // pattern 2: 3 stars per group
+    for (int i = 0; i < 18; i++) {
+      System.out.print("*");
+      if ((i + 1) % 3 == 0) {
+        System.out.print(" ");
+      }
+    }
+    System.out.println("end");
+
+    System.out.println();
+    int len = 6;
+    for (int i = 0; i < len; i++) {
+      for (int j = 0; j < 3; j++) {
+        System.out.print("*");
+      }
+      if (i == len - 1)
+        break;
+      System.out.print(" ");
+    }
+
+    System.out.println("end");
+    
+    System.out.println();
+    for (int i = 0; i < 6; i++) {
+      if (i > 0)
+        System.out.print(" ");
+
+      for (int j = 0; j < 3; j++) {
+        System.out.print("*");
+      }
 
     }
+
+    System.out.println("end");
 
   }
 
