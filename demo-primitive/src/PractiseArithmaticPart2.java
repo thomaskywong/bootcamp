@@ -102,6 +102,15 @@ public class PractiseArithmaticPart2 {
     int b = (a++ + 3) * a++;
     System.out.println("b = " + b + ", a = " + a);
 
+    a = 3;
+    b = a++ * ++a;
+    // b = 3 * ++a
+    // a++ -> a = a + 1 = 3 + 1 = 4
+    // ++a -> a = a + 1 = 5
+    // b = 3 * 5
+    // b = 15 
+    System.out.println("a = " + a + ", b = " + b);
+
 
   }
   

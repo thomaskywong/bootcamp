@@ -128,6 +128,7 @@ public class PractiseArrayDeclare {
       System.out.print(stringArray1[i] + " ");
     }
     System.out.println();
+    System.out.println();
 
     String[] stringArray2 = new String[] {"Apple", "Orange", "Strawberry", "Grape", "Bananna", "Mango"};
     for (int i = 0; i < stringArray2.length; ++i) {
@@ -139,7 +140,7 @@ public class PractiseArrayDeclare {
     for (int i = 0; i < stringArray2.length; ++i) {
       stringArray1[i] = stringArray2[i];
     }
-    for (int i = 0; i < stringArray1.length; i++) {
+    for (int i = 0; i < stringArray1.length; i++) {       
       System.out.print(stringArray1[i] + " ");
     }
 
