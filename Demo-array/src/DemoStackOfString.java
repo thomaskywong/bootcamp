@@ -73,9 +73,6 @@ public class DemoStackOfString {
     index = stack.getStack();
     System.out.println("The number of element in stack = " + index);
 
-
-
-    // 
   }
   
 }

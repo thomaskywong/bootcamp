@@ -13,12 +13,13 @@ public class StringStack {
 
   public void push(String element) {
     if (top == maxSize) {
-      System.out.println("The stack is full");
-    } else {
-      stringStack[top] = element;
-      top++;
-      System.out.println(element +" is added into the stack");
-    }
+      System.out.println("Extends stack size");
+      extendSize();
+    } 
+    stringStack[top] = element;
+    top++;
+    System.out.println(element +" is added into the stack");
+    
   }
 
   public String pop() {
@@ -59,6 +60,18 @@ public class StringStack {
         top = 0;
         return top; 
     }
+  }
+
+  private void extendSize() {
+    var temp = stringStack;
+    maxSize *= 2;
+
+    stringStack = new String[maxSize];
+
+    for (int i = 0; i < temp.length; i++) {
+      stringStack[i] = temp[i];
+    }
+
   }
 
 }
