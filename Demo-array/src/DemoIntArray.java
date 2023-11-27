@@ -78,5 +78,40 @@ public class DemoIntArray {
         for (int i = 0; i < array4.length; i++) {
             System.out.print(array4[i] + " ");
         }
+
+        // array supports for-loop
+        System.out.println();
+        System.out.println();
+        // default value of int[]
+        // the array variable arr[i] store the heap address value of the array element at index i
+        int[] arr5 = new int[3];
+        for (int i = 0; i < arr5.length; i++) {
+            System.out.print(arr5[i] + " ");
+        }
+        System.out.println();
+        System.out.println();
+
+         for (int i = 0; i < arr5.length; i++) {
+            arr5[i] = i + 1;
+            System.out.println("arr5[" + i + "] = " + arr5[i]);
+        }
+        System.out.println();
+        
+        for (int i = arr5.length - 1; i >= 0; i--) {
+            System.out.println("arr5[" + i + "] = " + arr5[i]);
+        }
+
+         for (int i = arr5.length - 1; i >= 0; i--) {
+            System.out.print(arr5[i]);
+            if ( i > 0 )
+                System.out.print(" ");
+        }
+
+
+        // String str = String.valueOf("hello");
+        // System.out.println(str);
+
+
+
     }
 }

@@ -35,12 +35,12 @@ public class DemoASCII {
                                                   // s5.length() = 4, and s1.length() = 6, so 4 - 6 -> -2
       System.out.println(s6.compareTo(s1));       // only the 4th character is different. A = 65, d = 100, 65 - 100 -> -35                                            
       
-      // System.out.println();
-      // char c1 = 0;
-      // for (int i = 0; i < 94; ++i) {
-      //   c1 = (char) (i + 32);
-      //   System.out.println(c1);
-      // }
+      System.out.println();
+      char c1 = 0;
+      for (int i = 0; i < 96; ++i) {
+        c1 = (char) (i + 32);
+        System.out.print(c1 + " ");
+      }
   }
   
 }
