@@ -16,10 +16,10 @@ public class JavaQuest6 {
     for (int i = 0; i < size; i++) {
       if (i < 2) {
         System.out.print(seq[i] + " ");
-        continue;
+      } else {
+        seq[i] = seq[i - 1] + seq[i - 2];
+        System.out.print(seq[i] + " ");
       }
-      seq[i] = seq[i - 1] + seq[i - 2];
-      System.out.print(seq[i] + " ");
     }
 
     // System.out.println();
