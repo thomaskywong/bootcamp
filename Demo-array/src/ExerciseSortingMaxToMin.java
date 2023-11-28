@@ -5,7 +5,7 @@ public class ExerciseSortingMaxToMin {
   public static void main(String[] args){
 
     int[] arr2 = new int[] {100,-20, 4, 100, 500, -40, 68, 225, -1000};
-    int temp = Integer.MIN_VALUE;
+    int temp = 0;
     
     // result {500, 100, 100, 4, -20}
     for (int i = 0; i < arr2.length -1; i++) {
