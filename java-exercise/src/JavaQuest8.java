@@ -28,9 +28,6 @@ public class JavaQuest8 {
     int secondMax = Integer.MIN_VALUE;
 
     for (int i = 0; i < arr.length; i++) {
-      if (i == 0) {
-        firstMax = arr[i];
-      } else {
         if (arr[i] > firstMax) {
           secondMax = firstMax;
           firstMax = arr[i]; 
@@ -38,7 +35,7 @@ public class JavaQuest8 {
           secondMax = arr[i];
         }
       }
-    }
+    
     return secondMax;
   }
 
