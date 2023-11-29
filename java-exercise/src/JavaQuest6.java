@@ -22,8 +22,8 @@ public class JavaQuest6 {
       }
     }
 
-    // System.out.println();
-    // System.out.println(Arrays.toString(seq));
+    System.out.println();
+    System.out.println(Arrays.toString(seq));
   }
 
 }
