@@ -22,9 +22,9 @@ public class PractisePassByReference {
       for (int j = 0; j < names.length - i - 1; j++) {
         if (names[j + i + 1].compareTo(names[i]) < 0) {
           minIndex = j + i + 1;
-          String temp = String.valueOf(names[i]);
-          names[i] = String.valueOf(names[minIndex]);
-          names[minIndex] = String.valueOf(temp);
+          String temp = names[i];
+          names[i] = names[minIndex];
+          names[minIndex] = temp;
         }
 
       }
