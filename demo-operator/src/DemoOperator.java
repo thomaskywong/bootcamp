@@ -48,6 +48,7 @@ public class DemoOperator {
     b = 4;
 
     // && AND operation
+    // &&, if left side is false, right side will not be executed
     if (a == 2 && b == 4) // and relationship, both conditions are true
       // a == 2 is true
       // b == 4 is true
@@ -57,6 +58,7 @@ public class DemoOperator {
       System.out.println("no");
 
     // || Or operation
+    // ||, if right side is true, right side will not be executed
     if (a == 2 || b == 5) // or relationship, either one condition is true
       // a == 2 is true
       // b == 5 is false
@@ -139,6 +141,7 @@ public class DemoOperator {
     // h.charAt(3) == 'e' is false
     // b == 6 is true
     // false || true -> true
+    // || Or, if the left side is true, right side will not be executed 
     if (h.charAt(3) == 'e' || b == 6) {
       System.out.println("yes");
     } else {
@@ -234,6 +237,7 @@ public class DemoOperator {
     }
 
     String string1 = "www.apple.com";
+    // || OR operator. If the left side is true, right side will not be executed
     if (string1.length() < 10 || "www.apple.com".equals(string1)) {
       System.out.println("length < 10 or www.apple.com");
     }
