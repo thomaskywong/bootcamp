@@ -240,6 +240,7 @@ public class PractiseStringMethod2 {
     System.out.println("str.lastIndexOf('" + c2 + "'); -> " + str.lastIndexOf(c2));   // -1
     
     // .lastIndexOf(char c, int upToIndex)
+    // return index of target char if found up to and include the upToIndex
     c1 = 'o';
     c2 = 'C';
     int upToIndex = 7;
@@ -249,27 +250,83 @@ public class PractiseStringMethod2 {
     System.out.println("str = " + str);
     System.out.println("str.lastIndexOf('" + c1 + "', " + upToIndex + "); -> " + str.lastIndexOf(c1, upToIndex));     // 2
     System.out.println("str.lastIndexOf('" + c1 + "', " + upToIndex2 + "); -> " + str.lastIndexOf(c1, upToIndex2));   // 8
-    System.out.println("str.lastIndexOf('" + c1 + "', " + upToIndex3 + "); -> " + str.lastIndexOf(c1, upToIndex3));   // 8
-    
+    System.out.println("str.lastIndexOf('" + c1 + "', " + upToIndex3 + "); -> " + str.lastIndexOf(c1, upToIndex3));   // 2
+    System.out.println();
     
     // .lastIndexOf(String s)
+    str = "abcabcdefabc";
+    String target1 = "abc";
+    String target2 = "def";
+    upToIndex = 7;
+    upToIndex2 = 9;
+    upToIndex3 = 2;
+    System.out.println("str = " + str);
+    System.out.println("str.lastIndexOf(\"" + target2 + "\", " + upToIndex2 + "); -> " + str.lastIndexOf(target2, upToIndex2));   // 6
+    System.out.println("str.lastIndexOf(\"" + target1 + "\", " + upToIndex + "); -> " + str.lastIndexOf(target1, upToIndex));     // 3
+    System.out.println("str.lastIndexOf(\"" + target2 + "\", " + upToIndex3 + "); -> " + str.lastIndexOf(target2, upToIndex3));   // -1
+    System.out.println();
+
     // .LastIndexOf(String s, int upToIndex)
+    str = "abcabcdefabc";
+    target1 = "abc";
+    target2 = "def";
+    String target3 = "xxx";
+    System.out.println("str = " + str);
+    System.out.println("str.lastIndexOf(\"" + target2 + "\"); -> " + str.lastIndexOf(target2));   // 6
+    System.out.println("str.lastIndexOf(\"" + target1 + "\"); -> " + str.lastIndexOf(target1));   // 9
+    System.out.println("str.lastIndexOf(\"" + target3 + "\"); -> " + str.lastIndexOf(target3));   // -1
 
-    // .concat(String s)
+    // s1.concat(String s2)
+    // concatentate String s1 with String s2
+    // return new string
+    s1 = "Hello";
+    s2 = " World!";
+    s3 = s1.concat(s2);
+    System.out.println("s1 = " + s1);
+    System.out.println("s2 = " + s2);
+    System.out.println("s1.concat(s2) = " + s3);
+    System.out.println();
 
-    // .compareTo(String s)
+    
+    // s1.compareTo(String s2)
+    // Compare s1 with s2. Return 0 if identical
+    // return ASCII value difference of the left most different alphabets
+    // return the length difference if s1 is the substring of s2 or vise versa
+    s1 = "Hello";
+    s2 = "Hello World";
+    s3 = "Hi";
+    System.out.println("s1 = " + s1 );
+    System.out.println("s2 = " + s2 );
+    System.out.println("s3 = " + s3 );
+    System.out.println("s1.compareTo(s2) -> " + s1.compareTo(s2));              // -6
+    System.out.println("\"Hello\".compareTo(s1) -> " + "Hello".compareTo(s1));  // 0 
+    System.out.println("s1.compareTo(s3) -> " + s1.compareTo(s3));              // -4
+    System.out.println();
     
     // String.valueOf( xxx )
     // Assign xxx to string
-    // xxx can be any primitive types, wrapper class object or String
-    Integer int0 = Integer.valueOf(15);
-    String string0 = String.valueOf(int0);
-    // System.out.println(string0);
+    // xxx can be any 17 types. primitive types, wrapper class object or String
+    // return String of input value
+    String output = String.valueOf("abc");    //String "abc" 
+    System.out.println(output);
 
+    output = String.valueOf(true);            // boolean true -> string
+    System.out.println(output);
+  
+    output = String.valueOf((byte)123);       // byte 123 -> string
+    System.out.println(output);
     
+    output = String.valueOf(456_123);       // int 456123 -> string
+    System.out.println(output);
 
+    output = String.valueOf(789_123L);       // long 789123 -> string
+    System.out.println(output);
 
+    output = String.valueOf(2.33d);       // double 2.33 -> string
+    System.out.println(output);    
 
+    output = String.valueOf(3.1415f);       // float 3.1415 -> string
+    System.out.println(output);    
 
   }
   
