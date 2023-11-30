@@ -7,7 +7,7 @@ public class PractiseWrapperClass {
     boolean b1 = true;
     Boolean b2 = Boolean.valueOf(b1);           // self-box
     Boolean b3 = Boolean.valueOf(false);        // .valueOf()
-    Boolean b4 = new Boolean(true);
+    Boolean b4 = new Boolean(true);             // Constructor
     Boolean b5 = false;                         // Auto-box
     Boolean b6 = b1;                            // Auto-box          
 
@@ -21,7 +21,7 @@ public class PractiseWrapperClass {
     byte byte1 = 1;
     Byte byte2 = Byte.valueOf(byte1);           // self-box
     Byte byte3 = Byte.valueOf((byte) -23);       // int -> byte requires explicit casting
-    Byte byte4 = new Byte((byte) 123);          
+    Byte byte4 = new Byte((byte) 123);          // Constructor
     Byte byte5 = -128;                          // autobox and auto down cast
 
     System.out.println(byte2.compareTo(byte1)); // equals -> return 0
@@ -30,10 +30,10 @@ public class PractiseWrapperClass {
     System.out.println();
 
     // short -> Short
-    short s1 = 5344;
-    Short s2 = Short.valueOf(s1);
+    short s1 = 5344;                            // auto box
+    Short s2 = Short.valueOf(s1);               // static method
     Short s3 = Short.valueOf((short) -2312);    // self box and auto down cast
-    Short s4 = new Short((short) 23221);
+    Short s4 = new Short((short) 23221);        // Constructor
     Short s5 = -231;                            // auto box and auto down cast
     System.out.println(s2.compareTo(s1));       // equals -> return 0
     System.out.println(s3.compareTo(s2));       // negative.compareTo(positive) -> return difference -2312 - 5344 = -7656
@@ -44,7 +44,7 @@ public class PractiseWrapperClass {
     int int1 = 2300;
     Integer int2 = Integer.valueOf(int1);        
     Integer int3 = Integer.valueOf(-2311);      // self-box
-    Integer int4 = new Integer(1243);
+    Integer int4 = new Integer(1243);           // Constructor
     Integer int5 = -3231;                       // auto-box
     System.out.println(int2.compareTo(int1));   // equals -> return 0
     System.out.println(int3.compareTo(int2));   // negative.compareTo(positive) -> return -1
@@ -52,10 +52,10 @@ public class PractiseWrapperClass {
     System.out.println();
 
     // long -> Long
-    long long1 = 1000L;
+    long long1 = 1000L;                           // auto box
     Long long2 = Long.valueOf(long1);           
     Long long3 = Long.valueOf(-1010L);           // self box
-    Long long4 = new Long(2000L);  
+    Long long4 = new Long(2000L);                 // Constructor
     Long long5 = -3000L;                         // auto box
     
     System.out.println(long2.compareTo(long1));  // equals -> return 0
@@ -65,9 +65,9 @@ public class PractiseWrapperClass {
 
     // float -> Float
     float f1 = 1.23f;
-    Float f2 = Float.valueOf(f1);
+    Float f2 = Float.valueOf(f1);                 // auto box
     Float f3 = Float.valueOf(-3231.312f);         // self box
-    Float f4 = new Float(-2.134f);            
+    Float f4 = new Float(-2.134f);                // Constructor
     Float f5 = 321.3f;                           // auto box
 
     System.out.println(f2.compareTo(f1));         // equals -> return 0
@@ -77,9 +77,9 @@ public class PractiseWrapperClass {
     
     // double -> Double
     double d1 = 1.23d;
-    Double d2 = Double.valueOf(d1);
+    Double d2 = Double.valueOf(d1);               // static method
     Double d3 = Double.valueOf(-3231.312d);       // self box
-    Double d4 = new Double(-2.134d);            
+    Double d4 = new Double(-2.134d);              // Constructor
     Double d5 = 321.3d;                           // auto box
 
     System.out.println(d2.compareTo(d1));         // equals -> return 0
@@ -91,7 +91,7 @@ public class PractiseWrapperClass {
     char c1 = 'A';
     Character c2 = Character.valueOf(c1);         
     Character c3 = Character.valueOf('a');        // self cast
-    Character c4 = new Character('B');
+    Character c4 = new Character('B');            // Constructor
     Character c5 = 'b';                           // auto cast
 
     System.out.println(c2.compareTo(c1));         // equals -> return 0
@@ -101,7 +101,7 @@ public class PractiseWrapperClass {
     
     // String
     String str1 = "Hello World!";                     // auto box
-    String str2 = String.valueOf(str1);
+    String str2 = String.valueOf(str1);               // static method
     String str3 = String.valueOf("hello World!");     // self box
     String str4 = new String("Hello World");          // constructor
     
