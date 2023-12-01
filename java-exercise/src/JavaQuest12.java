@@ -40,6 +40,7 @@ public class JavaQuest12 {
         if (arr[i] + arr[j] == target) {
           index[0] = i;
           index[1] = j;
+          return index;
         }
       }
     }
