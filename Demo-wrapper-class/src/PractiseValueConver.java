@@ -60,8 +60,8 @@ public class PractiseValueConver {
 
     // String -> Character DOES NOT EXIST!!!
     // char -> Character
-    Character c01 = Character.valueOf('c');       // char -> Character
-    Character c03 = 'c';                                    // auto boxing
+    Character c01 = Character.valueOf('c');       // char -> Character. Cannot accept String!
+    Character c03 = 'c';                          // auto boxing
     System.out.println("char -> Character.valueOf(): " + c01);
     System.out.println("char -> Character (auto boxing): " + c03 );     
 

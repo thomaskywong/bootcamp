@@ -41,6 +41,11 @@ public class DemoASCII {
         c1 = (char) (i + 32);
         System.out.print(c1 + " ");
       }
+
+      char c10 = 'c';
+      int i10 = 10 + 'c';
+      System.out.println(i10);
+      System.out.println((char) i10);
   }
   
 }
