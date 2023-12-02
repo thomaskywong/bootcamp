@@ -3,8 +3,8 @@ public class Train {
   private String name;
   private int speed;
   private boolean isForward;
-  final private int MAX_SPEED = 10;
-  final private int MIN_SPEED = 0;
+  private final int MAX_SPEED = 10;
+  private final int MIN_SPEED = 0;
 
   public Train() {
     this.name = "";
@@ -13,27 +13,31 @@ public class Train {
   }
 
   public Train(String name) {
-    this.name = name;
+    if (name == null)
+      this.name = "";
+    else
+      this.name = name;
+
     this.speed = 0;
     this.isForward = true;
   }
 
   public void accelerate() {
     if (this.speed < MAX_SPEED) {
-      System.out.println("Speeding up.");
+      //System.out.println("Speeding up.");
       this.speed += 1;
-    }   
+    }
   }
 
   public void decelerate() {
     if (this.speed > MIN_SPEED) {
-      System.out.println("Slowing down.");
+      //System.out.println("Slowing down.");
       this.speed -= 1;
     }
   }
 
   public void breaking() {
-    System.out.println("Breaking...");
+    //System.out.println("Breaking...");
     this.speed = 0;
   }
 
@@ -45,7 +49,7 @@ public class Train {
     if (this.speed > 0) {
       breaking();
     }
-    System.out.println("Reverse direction.");
+    //System.out.println("Reverse direction.");
     this.isForward = !this.isForward;
   }
 
@@ -60,6 +64,4 @@ public class Train {
   public String getName() {
     return this.name;
   }
- 
-
 }

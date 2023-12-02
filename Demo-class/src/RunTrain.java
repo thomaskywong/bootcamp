@@ -3,6 +3,9 @@ public class RunTrain {
     
     Train thomas = new Train("Thomas");
 
+    thomas.setName("Tommy");
+    System.out.println("Name = " + thomas.getName());
+
     System.out.println("Thomas' Speed = " + thomas.getSpeed());
     System.out.println("Thomas is moving forward = " + thomas.getIsForward());
 
