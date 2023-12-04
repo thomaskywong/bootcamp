@@ -29,18 +29,5 @@ public class Circle {
     return Math.pow(this.radius, 2) * Math.PI;
   }
 
-  public static void main(String[] args) {
-    
-    Circle circle = new Circle();   // radius 0.0
-    circle.setRadius(3.2d);
-    System.out.println("radius = " + circle.getRadius());
-    System.out.println();
-
-    // circle.setRadius(1.0d);
-    System.out.println("radius = " + circle.getRadius());
-    System.out.println("diameter = " + circle.diameter());
-    System.out.println("Area = " + circle.area());
-
-  }
   
 }

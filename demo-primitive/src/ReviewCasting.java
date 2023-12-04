@@ -25,6 +25,10 @@ public class ReviewCasting {
     double d2 = 10.0f;    // float -> double OK
     // int k1 = 10L; // long -> int NOT OK
     // int k2 = 10.0f; // float 0
+
+    int int1 = 1;
+    byte byte01 = (byte) int1;        // int variable to byte, cannot auto cast
+    byte byte02 = 10;                 // int literal to byte, auto casting ok
    
   }
 
