@@ -17,23 +17,22 @@ public class Homework1 {
     // use for each loop
     for (String element : result) 
       System.out.println(element);
-    
-    
   }
 
 
   public static void multipleOf(String[] result) {
 
     for (int i = 0; i < result.length; i++) {
-      if ( (i + 1) % 5 == 0 && (i+ 1) % 3 == 0 ) 
+      if ( (i + 1) % 5 == 0 && (i+ 1) % 3 == 0 ) {
         result[i] = String.valueOf(i+1) + " is the multiple of 3 and 5";
-      else if ( (i + 1) % 3 == 0 ) 
+      } else if ( (i + 1) % 3 == 0 ) { 
         result[i] = String.valueOf(i+1) + " is the multiple of 3";
-      else if ( (i + 1) % 5 == 0) 
+      } else if ( (i + 1) % 5 == 0) { 
         result[i] = String.valueOf(i+1) + " is the multiple of 5";
-      else 
+      } else {      
         result[i] = String.valueOf(i+1);
-      
+      }
+
     }
 
   }
