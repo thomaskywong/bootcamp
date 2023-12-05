@@ -28,12 +28,6 @@ public class JavaQuest14 {
     boolean res4 = palindrome(22); // true
     boolean res5 = palindrome(1231); // false
 
-    System.out.println(res1);
-    System.out.println(res2);
-    System.out.println(res3);
-    System.out.println(res4);
-    System.out.println(res5);
-    System.out.println(palindrome(6577561));
   }
 
   // Code a method here to return true if the integer is palindrome, otherwise
