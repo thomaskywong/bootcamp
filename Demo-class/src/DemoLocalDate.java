@@ -9,10 +9,20 @@ public class DemoLocalDate {
     System.out.println(date2);
 
     LocalDate date3 = LocalDate.of(2023, 12, 4);
+    LocalDate date04 = LocalDate.of(2023, 12, 4);
+
+    // .equals()
+    System.out.println(".equals()");
+    System.out.println(date2.equals(date3));      // false
+    System.out.println(date04.equals(date3));     // true
+    System.out.println();
+
 
     // .isAfter
-    System.out.println(date3.isAfter(date2));
-
+    System.out.println(".isAfter()");
+    System.out.println(date3.isAfter(date2));     // false
+    System.out.println(date2.isAfter(date3));     // true
+    
     // .isBefore
     System.out.println(date3.isBefore(date2)); 
     

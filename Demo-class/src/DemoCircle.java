@@ -21,6 +21,16 @@ public class DemoCircle {
     System.out.println("circle 2 diameter = " + circle2.diameter());
     System.out.println("circle 2 Area = " + circle2.area());
 
+    System.out.println();
+    Circle c1 = new Circle(1.22);
+    System.out.println("Radius = " + c1.getRadius());
+    System.out.println("Area = " + c1.area());
+
+    System.out.println();
+    double radius3 = 2.0;
+    System.out.println("Static Method Area:");
+    System.out.println("Radius = " + radius3);
+    System.out.println("Area = " + Circle.area(radius3));
 
   }
 }

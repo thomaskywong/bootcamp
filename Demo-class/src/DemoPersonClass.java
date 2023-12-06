@@ -3,14 +3,16 @@ public class DemoPersonClass {
   public static void main(String[] args) {
     
     Person person1 = new Person();
+    System.out.println(person1.getFullName());        // null
+    System.out.println("Full name: " + person1.getFullName());
 
     person1.setFirstName("Thomas");
     person1.setLastName("Wong");
     System.out.println(person1.getFirstName());
     System.out.println(person1.getFullName());
 
-    Person person2 = new Person();
-    //person2.setFullName("Thomas", "Wong");
+    Person person2 = new Person();          // Call empty constructor
+    System.out.println("Empty Constructor");
     System.out.println("person2's full name: " + person2.getFullName());
 
     Person person3 = person1;
@@ -35,6 +37,14 @@ public class DemoPersonClass {
     System.out.println(testcase.getFullName(true));
     System.out.println(testcase.getFullName(false));
 
+    Person p1 = new Person("Thomas", "Wong", 44);
+    System.out.println("Instance method");
+    p1.swim();
+    p1.eat();
+    System.out.println();
+
+    System.out.println("Static method");
+    Person.swimming();
 
   }    
 
