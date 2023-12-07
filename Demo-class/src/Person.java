@@ -5,9 +5,6 @@ public class Person {
   private String lastName; // null
   private int age; // default 0
 
-
-  
-
   // Constructor (instantiate a Person's object)
   // default Constructor (empty constructor)
   public Person() {
