@@ -3,8 +3,6 @@ public class Employee {
     private int employeeId;
     private String name;
     private double basicSalary;
-    private boolean isOnDuty;
-
     private static int employeeIdCounter = 0;
 
     public Employee() {
@@ -15,7 +13,6 @@ public class Employee {
         this.employeeId = ++employeeIdCounter;
         this.name = name;
         this.basicSalary = basicSalary;
-        this.isOnDuty = false;
     }
 
     // getter
@@ -31,22 +28,11 @@ public class Employee {
         return this.basicSalary;
     }
 
-    public boolean isOnDuty() {
-        return this.isOnDuty;
-    }
 
 
     public void addDetail(String name, double basicSalary) {
         this.name = name;
         this.basicSalary = basicSalary;
-    }
-
-    public boolean onDuty() {
-        return this.isOnDuty = true;
-    }
-
-    public boolean offDuty() {
-        return this.isOnDuty = false;
     }
 
     public void setSalary(double basicSalary) {
@@ -57,6 +43,6 @@ public class Employee {
     public String toString() {
         return "\nEmployee ID: " + this.employeeId + "\nEmployee name: "
                 + this.name + "\nBasic salary: " + this.basicSalary
-                + "\nOn duty: " + this.isOnDuty + "\n";
+                + "\n";
     }
 }
