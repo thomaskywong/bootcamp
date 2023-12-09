@@ -50,10 +50,12 @@ public class DemoString {
     System.out.println(str10 == str11); // false. new String creates new objects
 
     String str12 = "aaa";
-    String str13 = new String("aaabbb").intern(); // Create object in literal pool
+    String str13 = new String("aaabbb").intern(); // Check if exists in literal pool. Create object in literal pool
     String str14 = "aaabbb";
     System.out.println(str13 == str14); // true
-    System.out.println((str13 == str11)); // false 
+    System.out.println((str13 == str11)); // true
+
+    
 
 
   }
