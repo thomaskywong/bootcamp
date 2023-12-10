@@ -54,7 +54,12 @@ public class PractiseBigDecimal {
     System.out.println(db1.equals(db1));     // true
     System.out.println(db2.equals(db1));     // false
 
+    System.out.println(bd01.divide(bd02, 0, RoundingMode.UP));
 
+    // .remainder()
+    BigDecimal bd11 = BigDecimal.valueOf(7.0d);
+    BigDecimal bd12 = BigDecimal.valueOf(5.0d);
+    System.out.println(bd11.remainder(bd12).doubleValue());   // 2.0
 
 
   }

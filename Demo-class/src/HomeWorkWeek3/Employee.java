@@ -80,8 +80,9 @@ public class Employee {
 
     double maxPayroll = 0;
 
-    for (int i = -0; i < payrolls.length; i++){
-      maxPayroll = Math.max(maxPayroll, payrolls[i].getTotalSalary().doubleValue());
+    for (int i = -0; i < payrolls.length; i++) {
+      maxPayroll =
+          Math.max(maxPayroll, payrolls[i].getTotalSalary().doubleValue());
     }
 
     return maxPayroll;
@@ -89,7 +90,20 @@ public class Employee {
   }
 
   // modifier
-  public void addPayroll(int year, int month, int day, BigDecimal totalSalary) {
+  public void addPayroll(int year, int month, int day, double overTimeHour) {
+
+    BigDecimal totalSalary = this.calculateSalary(overTimeHour);
+    LocalDate payrollDate = LocalDate.of(year, month, day);
+
+    Payroll payroll = new Payroll(payrollDate, totalSalary);
+    Payroll[] newArr = Arrays.copyOf(this.payrolls, this.payrolls.length + 1);
+    newArr[newArr.length - 1] = payroll;
+    this.payrolls = newArr;
+  }
+
+  public void addPayroll(int year, int month, int day) {
+
+    BigDecimal totalSalary = this.calculateSalary();
 
     LocalDate payrollDate = LocalDate.of(year, month, day);
     Payroll payroll = new Payroll(payrollDate, totalSalary);
@@ -132,11 +146,11 @@ public class Employee {
   public String toString() {
     StringBuilder output = new StringBuilder("");
 
-    output.append("ID: ").append(this.id)
-        .append("\nName: ").append(this.name)
-        .append("\nDate of employment: ").append(this.dateOfEmployment.toString())
-        .append("\nSalary rate( ").append(this.salary.toString()).append(" )");
-    
+    output.append("ID: ").append(this.id).append("\nName: ").append(this.name)
+        .append("\nDate of employment: ")
+        .append(this.dateOfEmployment.toString()).append("\nSalary rate( ")
+        .append(this.salary.toString()).append(" )");
+
     return output.toString();
   }
 
@@ -172,19 +186,19 @@ public class Employee {
     System.out.println("Empty payroll record.");
     System.out.println(thomas.payrollRecord());
 
-    thomas.addPayroll(2023, 10, 1, thomas.calculateSalary());
-    thomas.addPayroll(2023, 11, 1, thomas.calculateSalary(10));
+    thomas.addPayroll(2023, 10, 1);
+    thomas.addPayroll(2023, 11, 1, 10);
     System.out.println(thomas.payrollRecord());
 
-    thomas.addPayroll(2023, 12, 1, thomas.calculateSalary(20));
+    thomas.addPayroll(2023, 12, 1, 20);
     System.out.println(thomas.payrollRecord());
 
     System.out.println("Delete 2023-12 record");
     thomas.removePayroll(2023, 12);
     System.out.println(thomas.payrollRecord());
 
-    thomas.addPayroll(2023, 12, 1, thomas.calculateSalary(30));
-    thomas.addPayroll(2024, 1, 1, thomas.calculateSalary());
+    thomas.addPayroll(2023, 12, 1, 30);
+    thomas.addPayroll(2024, 1, 1);
     System.out.println(thomas.payrollRecord());
 
     System.out.println(thomas.toString());
@@ -195,6 +209,21 @@ public class Employee {
     System.out.println(thomas.toString());
     System.out.println(thomas.payrollRecord());
     System.out.println("Highest monthly salary: " + thomas.highestPayroll());
+    System.out.println();
+
+    yan.addPayroll(2023, 12, 01);
+    yan.addPayroll(2024, 1, 1, 10);
+    System.out.println(yan.toString());
+    System.out.println(yan.payrollRecord());    
+    
+    System.out.println("2023 payroll");
+    System.out.println(yan.payrollRecord(2023));
+
+    System.out.println("2024 payroll");
+    System.out.println(yan.payrollRecord(2024));
+
+
+
 
   }
 
