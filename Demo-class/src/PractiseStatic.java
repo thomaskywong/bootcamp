@@ -9,7 +9,7 @@ public class PractiseStatic {
   // Static method is method that can be used as public tool without instantiate an object
   // use ClassName.staticMethod() to call static method
 
-  private static int counter = 0;
+  private static int counter = 0; // initialize static field 
   private String name;
 
   public PractiseStatic(String name) {

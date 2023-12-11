@@ -61,6 +61,7 @@ public class PractiseBigDecimal {
     BigDecimal bd12 = BigDecimal.valueOf(5.0d);
     System.out.println(bd11.remainder(bd12).doubleValue());   // 2.0
 
+    System.out.println(bd11);
 
   }
 
