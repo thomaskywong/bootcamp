@@ -30,7 +30,5 @@ public class JavaQuest19 {
     // print the expected output
     System.out.println("Car Year=" + myCar.getCarYear() + ", Car Model=" + myCar.getCarModel());
 
-//       Map<Integer, String> hmap = new HashMap<>();
-// hmap.put(null, null)
   }
 }
