@@ -39,8 +39,13 @@ public class SuperDecimal extends BigDecimal {
     SuperDecimal sd3 = SuperDecimal.valueOf(4.0);
     //SuperDecimal sd5 = new SuperDecimal(sd2.multiply(sd3).doubleValue());
     SuperDecimal sd5 = sd2.multiply(sd3);
-    sd2.mutiply
     System.out.println( sd5.doubleValue() );
+
+    BigDecimal bd1 = (BigDecimal) sd5;
+    System.out.println( bd1.doubleValue() ); // (double) bd1
+
+
+
 
   }
   

@@ -55,7 +55,7 @@ public class DemoStringBuilder {
         chars.append(" ");
 
     }
-
+    
     System.out.println(chars.toString());
 
     System.out.println(chars.reverse().toString()); // reverse the StringBuilder

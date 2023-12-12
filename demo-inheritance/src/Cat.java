@@ -11,6 +11,12 @@ public class Cat extends Animal {
     super(age);
   }
 
+  @Override
+  public int getAge(){
+    System.out.println("this.getAge() is called.");
+    return super.getAge();
+  }
+
   public static void main(String[] args) {
     Cat cat1 = new Cat(4);
     System.out.println(cat1.getAge());

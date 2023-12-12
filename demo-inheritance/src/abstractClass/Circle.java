@@ -53,6 +53,12 @@ public class Circle extends Shape {
     circle2.setColor("BLACK");
     System.out.println(circle2.getColor());
 
+    circle2.getColor();
+
+    Shape s02 = (Shape) circle2;
+    System.out.println( s02.getColor());
+
+
 
   }
 

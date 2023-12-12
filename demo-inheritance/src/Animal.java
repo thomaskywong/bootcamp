@@ -12,6 +12,7 @@ public class Animal {   // abstract class. Cannot instantiated by new (No real o
     }
 
     public int getAge(){
+        System.out.println("super.getAge() is called.");
         return this.age;
     }
     

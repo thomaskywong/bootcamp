@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Calculator {
 
@@ -32,7 +33,7 @@ public class Calculator {
   }
 
   public double divide() {
-    // return this.x.divide(this.y).doubleValue();
+    return this.x.divide(this.y, 2, RoundingMode.HALF_UP).doubleValue();
   }
 
   public static void main(String[] args) {

@@ -19,7 +19,7 @@ public class PractiseBigDecimal {
     System.out.println(bd03.doubleValue());
 
     // .subtract()
-    bd03 = bd02.subtract(bd01); // 2.33333 + 1.3333 = 1.00003. return a new BigDecimal Object
+    bd03 = bd02.subtract(bd01); // 2.33333 - 1.3333 = 1.00003. return a new BigDecimal Object
     System.out.println(bd03.doubleValue());
 
     // .multiply()
@@ -46,11 +46,15 @@ public class PractiseBigDecimal {
 
     // .compareTo()
     // return 0 if two objects are equal. return 1 if bd1 > bd2, return -1 if bd1 < bd2 
+    // db1 = 1.0, db2 = 3.0
+    System.out.println(".compareTo()");
     System.out.println(db1.compareTo(db2));     // -1
     System.out.println(db2.compareTo(db1));     // 1
     System.out.println(db1.compareTo(db1));     // 0
 
     // .equals()
+    System.out.println();
+    System.out.println(".equals()");
     System.out.println(db1.equals(db1));     // true
     System.out.println(db2.equals(db1));     // false
 
@@ -62,6 +66,32 @@ public class PractiseBigDecimal {
     System.out.println(bd11.remainder(bd12).doubleValue());   // 2.0
 
     System.out.println(bd11);
+    System.out.println();
+
+    BigDecimal bd111 = BigDecimal.valueOf(7.0d);
+    BigDecimal bd112 = BigDecimal.valueOf(3.0d);
+    BigDecimal result = bd111.divide(bd112, 2, RoundingMode.HALF_UP);     // 2.3333333 -> 2.33
+    System.out.println(result.doubleValue());                            
+
+    result = bd111.divide(bd112, 2, RoundingMode.DOWN);     // 2.33
+    System.out.println(result.doubleValue());
+
+    result = bd111.divide(bd112, 2, RoundingMode.UP);     // 2.34
+    System.out.println(result.doubleValue());
+
+    result = bd111.divide(bd112, 2, RoundingMode.HALF_UP);     // 2.0
+    System.out.println(result.doubleValue());
+
+    bd111 = BigDecimal.valueOf(2.0d);
+    bd112 = BigDecimal.valueOf(3.0d);
+    result = bd111.divide(bd112, 2, RoundingMode.HALF_UP);     // 0.666666 -> 0.67
+    System.out.println(result.doubleValue());       // 0.67
+
+    result = bd111.divide(bd112, 2, RoundingMode.UP);     // 0.666666 -> 0.67
+    System.out.println(result.doubleValue());       // 0.67
+
+    result = bd111.divide(bd112, 2, RoundingMode.DOWN);     // 0.666666 -> 0.66
+    System.out.println(result.doubleValue());       // 0.66
 
   }
 
