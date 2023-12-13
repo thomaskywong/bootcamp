@@ -36,6 +36,13 @@ public class DemoStudent {
     SecondarySchoolStudent ss1 = (SecondarySchoolStudent) s2;
     ss1.goOutForLunch();
 
+    PrimarySchoolStudent ps2 = new PrimarySchoolStudent("Jerry");
+    SecondarySchoolStudent ss2 = new SecondarySchoolStudent("Tommy");
+    Student.addStudent(ps2);
+    Student.addStudent(ss2);
+    Student.viewStudentRecords();
+
+
   }
 
 }

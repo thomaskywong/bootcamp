@@ -1,4 +1,4 @@
-public class Animal {   // abstract class. Cannot instantiated by new (No real object)
+public abstract class Animal {   // abstract class. Cannot instantiated by new (No real object)
     
     // common attribute for Animal
     private int age;

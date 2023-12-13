@@ -1,7 +1,5 @@
 package polymophism;
 
-import java.util.Arrays;
-
 public abstract class Student {
 
   private String name;
