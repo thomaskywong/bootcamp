@@ -1,4 +1,5 @@
-public class Taxi implements Vehicle { // Class Signature
+public class Bus implements Vehicle{
+
 
   private int speed;
 
@@ -6,27 +7,23 @@ public class Taxi implements Vehicle { // Class Signature
 
   public static final int MAX_SPEED = 100;
 
-  public Taxi() {
+  public Bus() {
 
   }
 
-  // private Taxi(int speed) {
-  //   this.speed = speed;
-  // }
-
   // private constractor. 
-  private Taxi(int speed, int capacity) {
+  private Bus(int speed, int capacity) {
     this.speed = speed;
     this.capacity = capacity;
   }
 
   // static of() method
-  public static Taxi small() {
-    return new Taxi(0, 4); 
+  public static Bus doubleDeckBus() {
+    return new Bus(0, 150); 
   }
 
-  public static Taxi big() {
-    return new Taxi(0, 5); 
+  public static Bus singleDeckBus() {
+    return new Bus(0, 70); 
   }
 
   // getter
@@ -37,14 +34,11 @@ public class Taxi implements Vehicle { // Class Signature
   public int getCapacity() {
     return this.capacity;
   }
-
-  // setter (is setter necessary?)
-  // speed can be modifed by interface methods
-  // Constructor assign capacity when the Taxi object is instantiated
-
-  // public void setCapacity(int capacity) {
-  //   this.capacity = capacity;
-  // }
+ 
+  @Override
+  public boolean test() {
+    return false;
+  }
 
   @Override // let the compiler to ensure the implementation of interface
   public boolean start() {
@@ -95,7 +89,8 @@ public class Taxi implements Vehicle { // Class Signature
   }
 
   public boolean isOverMaxSpeed() {
-    return this.speed > Taxi.MAX_SPEED;
+    return this.speed > Bus.MAX_SPEED;
   }
+
 
 }

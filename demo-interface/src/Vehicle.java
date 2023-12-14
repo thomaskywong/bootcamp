@@ -7,7 +7,8 @@ public interface Vehicle {  // interface is an abstract class by default
     // if a class implements an interface, it has to implement all its abstract methods
     // (all or nothing)
 
-    // interface does not have instance variable. Only static final variable
+    // interface does not have instance variable. 
+    //Only static final variable
     int x = 10;     // implicitly public static final 
     // int y;       
 
@@ -18,13 +19,12 @@ public interface Vehicle {  // interface is an abstract class by default
     boolean accelerate();
 
     boolean brake();
-    
-    public static void main(String[] args) {
-        System.out.println(Vehicle.x);
-    }
-
-
-
+  
+    // After Java 8
+    // default instance method
+    default boolean test() {
+        return false;
+    }    
 
 
 }
