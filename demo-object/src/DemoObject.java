@@ -26,7 +26,6 @@ public class DemoObject { // implicitly extends Object
         DemoObject newObj = (DemoObject) obj;
 
         return this.age == newObj.age;
-
     }
 
     public static void main(String[] args) {
@@ -127,6 +126,7 @@ public class DemoObject { // implicitly extends Object
         System.out.println(obj1.equals(obj3));      // true. Down cast from obj1
         System.out.println(obj1.equals(obj4));      // false. Different object
         System.out.println(obj5.equals(obj6));      // false. Cannot downcast. Different object class
-        
+
+         
     }
 }

@@ -16,10 +16,10 @@ public class DemoNumber {
     // Long, Short, Byte, Integer, Float, Double
     // 1 and 2 auto box to Integer
     BigInteger bi1 = add(1, 2);
-    BigInteger bi2 = add(2, 5);
-    
-    System.out.println(bi1);
-    System.out.println(bi2);
+    System.out.println("result = " + bi1);
+    System.out.println();
+    BigInteger bi2 = add((short) 2, 5L);
+    System.out.println("result = " + bi2);
   }
 
   // public static Number add(Integer x, Integer y) {
@@ -28,36 +28,36 @@ public class DemoNumber {
   public static BigInteger add(Number x, Number y) {
     long lx = 0L;
     if (x instanceof Long) {
-      // System.out.println("instanceof Long");
+      System.out.println("instanceof Long");
       lx = (Long) x; // int -> Integer by autobox -> Long by casting, then auto unboxing to long
     } else if (x instanceof Short) {
-      // System.out.println("instanceof Short");
+      System.out.println("instanceof Short");
       lx = (Short) x; // auto unbox -> upcast
     } else if (x instanceof Byte) {
-      // System.out.println("instanceof Byte");
+      System.out.println("instanceof Byte");
       lx = (Byte) x; // auto unbox -> upcast
     } else if (x instanceof Integer) {
-      // System.out.println("instanceof Integer");
+      System.out.println("instanceof Integer");
       lx = (Integer) x; // auto unbox -> upcast
     }
 
     long ly = 0L;
     if (y instanceof Long) {
-      // System.out.println("instanceof Long");
+      System.out.println("instanceof Long");
       ly = (Long) y;
     } else if (y instanceof Short) {
-      // System.out.println("instanceof Short");
+      System.out.println("instanceof Short");
       ly = (Short) y;
     } else if (y instanceof Byte) {
-      // System.out.println("instanceof Byte");
+      System.out.println("instanceof Byte");
       ly = (Byte) y;
     } else if (y instanceof Integer) {
-      // System.out.println("instanceof Integer");
+      System.out.println("instanceof Integer");
       ly = (Integer) y;
     }
 
     return BigInteger.valueOf(lx + ly);
   }
 
-  
+
 }
