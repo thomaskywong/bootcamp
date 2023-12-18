@@ -20,9 +20,9 @@ public class DemoStudent {
     Student.viewStudentRecords();
     System.out.println();
 
-    s1.turnInHomework();
-    s3.turnInHomework();
-    Student.viewHomeworks();
+    s1.turnInHomework();    // inherited method from parent class
+    s3.turnInHomework();    // inherited method from parent class
+    Student.viewHomeworks();    // static method in parent class
     System.out.println();
 
     s2.turnInHomework();
@@ -30,11 +30,13 @@ public class DemoStudent {
 
     System.out.println();
     PrimarySchoolStudent ps1 = (PrimarySchoolStudent) s1;
-    ps1.lunchInClassroom();
+    ps1.lunchInClassroom(); // child class instance method can only be called by obj with the same class type reference
+    //s2.lunchInClassroom();  // parent class reference cannot call child class instance method. compilation error
 
     System.out.println();
     SecondarySchoolStudent ss1 = (SecondarySchoolStudent) s2;
     ss1.goOutForLunch();
+    // s2.goOutForLunch();  // parent class reference cannot call instance method of child class. Compilation error
 
     PrimarySchoolStudent ps2 = new PrimarySchoolStudent("Jerry");
     SecondarySchoolStudent ss2 = new SecondarySchoolStudent("Tommy");

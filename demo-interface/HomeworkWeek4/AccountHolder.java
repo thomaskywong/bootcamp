@@ -7,7 +7,7 @@ public class AccountHolder {
   private Transactable transact;
 
   // Constructor injection
-  public AccountHolder(String name, int age, Transactable transact) {
+  public AccountHolder(String name, Transactable transact) {
     this.name = name;
     this.accountNumber = ++accountNumCounter;
     this.transact = transact;
@@ -45,7 +45,7 @@ public class AccountHolder {
   public static void main(String[] args) {
 
     Transaction trans1 = new Transaction();
-    AccountHolder ah1 = new AccountHolder("Thomas", 44, trans1);
+    AccountHolder ah1 = new AccountHolder("Thomas", trans1);
 
     System.out.println("Balance: " + ah1.balance()); // 0
     System.out.println("Debiting 500: " + ah1.debit(500)); // false
@@ -65,7 +65,7 @@ public class AccountHolder {
     ah1.showTransactions();
     System.out.println("Balance: " + ah1.balance()); // 0
 
-    AccountHolder ah2 = new AccountHolder("Tommy", 40, new Transaction());
+    AccountHolder ah2 = new AccountHolder("Tommy", new Transaction());
     ah2.credit(20000);
     ah1.credit(30000);
     ah2.debit(100);

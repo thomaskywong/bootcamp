@@ -55,9 +55,14 @@ public class Cat {
   }
 
   // .hashCode() -> represent object address
+  // @Override
+  // public int hashCode() {
+  //   return Objects.hash(this.name, this.age, this.eyes); // hash value of a series of atrtribute
+  // }
+
   @Override
   public int hashCode() {
-    return Objects.hash(this.name, this.age, this.eyes); // hash value of a series of atrtribute
+    return Objects.hash( this.name, this.age, Arrays.deepHashCode(this.eyes));
   }
 
   public static void main(String[] args) {
@@ -72,7 +77,8 @@ public class Cat {
     System.out.println(cat1.equals(cat2)); // true, same attribute values
     System.out.println(cat1.equals(cat3)); // false, different attribute values
     System.out.println(cat3.equals(cat4)); // false, different attribute
-
+    System.out.println(cat1.hashCode());
+    System.out.println(cat2.hashCode());
   }
 
 }

@@ -37,7 +37,7 @@ public class Card {
 
   @Override
   public String toString(){
-    return suit.toString() + " " + rank.toString();
+    return suit + " " + rank;
   }
 
   //@Override

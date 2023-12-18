@@ -52,7 +52,7 @@ public abstract class Student {
  
   // Turn in homework
   public void turnInHomework() {
-    String homework = this.doHomework();
+    String homework = this.doHomework();    // call child's instance method by polymophism
     String[] newArr = new String[Student.homeworks.length + 1];
     for (int i = 0; i < Student.homeworks.length; i++) {
       newArr[i] = Student.homeworks[i];
