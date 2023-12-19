@@ -123,8 +123,27 @@ public class DemoArrayList {
         System.out.println(strings); // [789, 789, 1234]
         System.out.println();
 
+        // .isEmpty() return true if the Arraylist is an empty array. return false if not empty
+        System.out.println(".isEmpty()");
+        if (!strings.isEmpty()) {
+            System.out.println("The string is not empty.");
+        }
+        System.out.println();
+
+        // create a list of elements
+        List<String> arrList1 =
+                new ArrayList<>(List.of("John", "Mary", "Peter")); // Object of ArrayList
+        List<String> arrList2 = List.of("John", "Mary", "Peter"); // List is immutabable. cannot add or remove
+
+        arrList1.add("Sally"); // can add. call ArrayList object's instance method
+        arrList1.remove("John"); // can remove. call ArrayList object's instance method
+
+        arrList2.set(1, "Happy"); // runtime error, java.lang.UnsupportedOperationException
+        arrList2.add("Joe"); // java.lang.UnsupportedOperationException
+
         // List<> is the interface implemented by ArrayList.
         // ArrayList<> object in List<> type of reference pointer could call ArrayList<> methods by overriding
+
         List<String> list2 = new ArrayList<>(List.of("1234", "2345", "0000"));
         System.out.println(list2); // [1234, 2345, 0000]
         System.out.println(list2.size()); // 3
@@ -135,7 +154,7 @@ public class DemoArrayList {
         System.out.println(list2); // [2345, 0000, 777]
         List<String> list3 = new ArrayList<>(List.of("2345", "0000"));
         System.out.println(list2.containsAll(list3)); // true
-        list2.
+
 
 
     }
