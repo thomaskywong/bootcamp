@@ -26,10 +26,11 @@ public class Node {
 
   public void setNext(Node next) {
     this.next = next;
-    next.setPrev(this);
+    if (next != null) 
+      next.setPrev(this);
   }
 
-  private void setPrev(Node prev) {
+  public void setPrev(Node prev) {
     this.prev = prev;
   }
 
@@ -60,6 +61,8 @@ public class Node {
     System.out.println(head.getEndVal()); // 102
 
     System.out.println(head.next().next().prev().getVal()); // 101
+
+    
 
 
   }
