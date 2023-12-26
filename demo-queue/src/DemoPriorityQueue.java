@@ -25,14 +25,12 @@ public class DemoPriorityQueue {
     qs2.add("c");
     qs2.add("a");
 
-      System.out.println(qs2.poll());
-      System.out.println(qs2.poll());
-      System.out.println(qs2.poll());
-      System.out.println(qs2.poll());
-//      System.out.println(qs2.poll());
-
-
-
+    int size = qs2.size();
+    
+    System.out.println(qs2.size());
+    for (int i = 0; i < size; i++) {
+      System.out.print(qs2.poll() + " ");
+    }
 
   }
 }
