@@ -12,12 +12,12 @@ public class DemoSet {
         List<String> ls = new ArrayList<>();
 
 
-        ls.add("ABC");
+        ls.add("ABC");zzzx 
         ls.add("ABC");
         ls.add("ABC");
 
         // HashSet methods
-        // .add(Object)
+        // .add(Object) unique element. reture false if duplicated
         for (String s : ls) {
             System.out.println(ss.add(s)); // true, false, false
         }
@@ -44,7 +44,7 @@ public class DemoSet {
         ss.addAll(list1);
         System.out.println(ss); // ["ABC","EFG","HIJ"]
 
-
+        // clear()
 
     }
 }

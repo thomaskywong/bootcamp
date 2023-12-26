@@ -13,8 +13,6 @@
  * Example 3: Input: num = 1248 Output: 4 Explanation: 1248 is divisible by all of its digits, hence the answer is 4.
  */
 
-import java.math.BigDecimal;
-
 public class JavaQuest30 {
   public static void main(String[] args) {
     System.out.println(countDigits(7));// output : 1

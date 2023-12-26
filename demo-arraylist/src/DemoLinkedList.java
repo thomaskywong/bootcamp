@@ -10,12 +10,17 @@ public class DemoLinkedList {
     ls.add("XYZ");
     ls.add("IJK");
 
-    System.out.println(ls);
+    System.out.println(ls); // [ABC, XYZ, IJK]
 
     ls.remove(); // remove first element. Only available in LiskedList
-    System.out.println(ls);
+    System.out.println(ls); // [XYZ, IJK]
+    ls.removeFirst(); // remove first element. Only available in LiskedList
+    System.out.println(ls); // [IJK]
+    ls.addFirst("DED"); // add element to the beginning
+    System.out.println(ls); // [DED, IJK]
     ls.removeLast(); // remove last element. Only available in LinkedList
-    System.out.println(ls);
+    System.out.println(ls); // [DED]
+
 
     List<String> ls2 = new LinkedList<>();
     ls2.add("ABC");
