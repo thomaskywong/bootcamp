@@ -45,6 +45,7 @@ public class Box<T> {
     List<Shape> s2 = (List<Shape>) ss;
     s2.add(shape);
     System.out.println(s2.get(0).area());
+
   }
 
   // The pointer of list can only point to itself class object or its parent class object

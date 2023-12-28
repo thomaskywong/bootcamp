@@ -10,8 +10,14 @@ public class StringPrinter {
     return this.x;
   }
 
+  @Override
+  public String toString() {
+    return this.x;
+  }
+
   public static void main(String[] args) {
     StringPrinter sp = new StringPrinter("hello");
+    System.out.println(sp);
   }
   
 }

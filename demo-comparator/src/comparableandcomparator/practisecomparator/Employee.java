@@ -3,7 +3,7 @@ package comparableandcomparator.practisecomparator;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable <Employee>{
 
   private String name;
   private LocalDate joinDate;
@@ -45,6 +45,21 @@ public class Employee {
   @Override
   public int hashCode() {
     return Objects.hash(this.name, this.joinDate); 
+  }
+
+  @Override
+  public int compareTo(Employee employee) {
+    if (employee.getJoinDate().compareTo(this.joinDate) > 0) {
+      return -1;
+    } else if (employee.getJoinDate().compareTo(this.joinDate) == 0) {
+      if (employee.getName().compareTo(this.name) > 0) {
+        return -1;
+      } else {
+        return 1;
+      }
+    } else {
+      return 1;
+    }
   }
   
 

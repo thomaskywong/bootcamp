@@ -8,7 +8,7 @@ import java.util.List;
 public class DemoEmployeeComparator {
 
   public static void main(String[] args) {
-    
+
     // Instantiate Employee objects
     Employee e1 = new Employee("Thomas", LocalDate.of(2023, 1, 1));
     Employee e2 = new Employee("Keith", LocalDate.of(2013, 10, 1));
@@ -28,8 +28,15 @@ public class DemoEmployeeComparator {
     Collections.sort(employees, sortByName);
     System.out.println(employees); // [name=Jerry, joinDate=2015-12-30, name=Keith, joinDate=2013-10-01, name=Thomas, joinDate=2023-01-01]
 
+    Employee e4 = new Employee("Percy", LocalDate.of(2015, 12, 30));
+    employees.add(e4);
+    System.out.println(employees); // [name=Jerry, joinDate=2015-12-30, name=Keith, joinDate=2013-10-01, name=Thomas, joinDate=2023-01-01, name=Percy, joinDate=2015-12-30]
+
+    Collections.sort(employees); // sort by date, then sort by name
+    System.out.println(employees); // [name=Keith, joinDate=2013-10-01, name=Jerry, joinDate=2015-12-30, name=Percy, joinDate=2015-12-30, name=Thomas, joinDate=2023-01-01]
+
 
 
   }
-  
+
 }
