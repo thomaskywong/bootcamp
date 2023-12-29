@@ -1,4 +1,4 @@
-package src;
+
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -46,6 +46,8 @@ public class DemoArrayDeque {
     dq.removeLast(); // get and remove CCC
     System.out.println(dq.toString()); // AAA BBB
 
+    dq.push("EEE");
+    System.out.println(dq.toString());
 
 
   }

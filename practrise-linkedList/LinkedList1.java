@@ -115,8 +115,12 @@ public class LinkedList1 {
 
     System.out.println(ll2.size()); // 6
     System.out.println(ll2.isEmpty()); // false
+    System.out.println();
 
-
+    // .remove() - remove the head element
+    System.out.println(ll2);
+    System.out.println(ll2.remove());
+    System.out.println(ll2);
 
   }
 

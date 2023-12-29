@@ -47,22 +47,22 @@ public class Shape {
 
   // BigDecimal totalArea = BigDecimal.valueOf(0.0d);
 
-  // for (Shape shape : list) { // compilation error. 
+  // for (Shape shape : list) { // compilation error.
   // totalArea = totalArea.add(BigDecimal.valueOf(shape.area()));
   // }
 
   // return totalArea.doubleValue();
-  //}
+  // }
 
   // public static double totalArea4(List<? super Shape> list) { // ? could be Shape or parent of Shape
 
-  //   BigDecimal totalArea = BigDecimal.valueOf(0.0d);
+  // BigDecimal totalArea = BigDecimal.valueOf(0.0d);
 
-  //   for (Shape shape : list) { // compilation error. Object in list can be parent of Shape, which cannot be cast to child object!
-  //     totalArea = totalArea.add(BigDecimal.valueOf(shape.area()));
-  //   }
+  // for (Shape shape : list) { // compilation error. Object in list can be parent of Shape, which cannot be cast to child object!
+  // totalArea = totalArea.add(BigDecimal.valueOf(shape.area()));
+  // }
 
-  //   return totalArea.doubleValue();
+  // return totalArea.doubleValue();
   // }
 
   public static double totalCircleArea(List<? super RedCircle> list) {
@@ -72,6 +72,12 @@ public class Shape {
 
     for (int i = 0; i < list.size(); i++) {
       circle = (Circle) list.get(i);
+      result = result.add(BigDecimal.valueOf(circle.area()));
+    }
+
+    RedCircle redCircle;
+    for (int i = 0; i < list.size(); i++) {
+      redCircle = list.get(i);
       result = result.add(BigDecimal.valueOf(circle.area()));
     }
 

@@ -21,9 +21,13 @@ public class DemoMoneyWithdrawal {
     account.withdraw(5_000.0d);
     System.out.println();
 
-    account.withdraw(-1_000.0d); // java.lang.IllegalArgumentException: Amount cannot be <= 0. 
+    try {
+      account.withdraw(-1_000.0d); // java.lang.IllegalArgumentException: Amount cannot be <= 0. 
+    } catch (IllegalArgumentException ex) {
+      System.out.println(ex.getMessage());
+    }
     //account.deposit(-100.0d); //java.lang.IllegalArgumentException: Amount cannot be <= 0. 
-
+    
   }
   
 }

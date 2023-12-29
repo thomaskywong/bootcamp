@@ -19,7 +19,7 @@ public class BankAccount {
     return this.balance;
   }
 
-  public boolean deposit(double amount) throws IllegalArgumentException {
+  public boolean deposit(double amount) {  // Runtime exception needs not to be thrown explicitly
     NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     if (amount <= 0) {
@@ -32,7 +32,7 @@ public class BankAccount {
     return true;
   }
 
-  public boolean withdraw(double amount) throws IllegalArgumentException {
+  public boolean withdraw(double amount) {
 
     NumberFormat currency = NumberFormat.getCurrencyInstance();
 

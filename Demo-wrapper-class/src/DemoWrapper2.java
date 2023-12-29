@@ -23,6 +23,9 @@ public class DemoWrapper2 {
     } else {
     }
 
+    Integer i = 0;
+    i++;
+    System.out.println(i);
 
   }
 
