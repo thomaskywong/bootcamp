@@ -1,5 +1,3 @@
-package src;
-
 // import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -11,9 +9,10 @@ public class DemoPriorityQueue {
     Queue<String> qs = new PriorityQueue<>();
 
     // .add(E element) every added element will be sorted
-    qs.add("hello");
+    qs.add("d");
+    qs.add("b");
+    qs.add("c");
     qs.add("a");
-    qs.add("x");
 
     System.out.println(qs);
 
