@@ -1,3 +1,7 @@
+import Calculable;
+import Walkable;
+
+package lambda;
 public class DemoLambda {
     public static void main(String[] args) {
         // inner class

@@ -1,3 +1,4 @@
+package lambda;
 
 
 import java.util.function.Function;
@@ -10,6 +11,7 @@ public class DemoFunction {
     // y = x + 3
 
     // T argument type is String, R return type is Integer
+    // Function<input type, output type>
     Function<String, Integer> stringLength = (str) -> {
       return str.length();
     };

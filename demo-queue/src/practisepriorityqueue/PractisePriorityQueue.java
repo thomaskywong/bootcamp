@@ -1,5 +1,3 @@
-package src.practisepriorityqueue;
-
 import java.util.PriorityQueue;
 
 public class PractisePriorityQueue {
