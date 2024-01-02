@@ -31,6 +31,16 @@ public class DemoPredicate {
     Predicate<Integer> isChild = x -> x >= 0 && x < 18;
     System.out.println(isChild.test(10)); // true
     System.out.println(isChild.test(20)); // false
+    System.out.println();
+
+    Predicate<Integer> isEvenAge = x -> x % 2 == 0;
+    System.out.println(isChild.and(isEvenAge).test(10)); // true
+    System.out.println(isChild.and(isEvenAge).test(11)); // false
+    System.out.println(Predicate.not(isEvenAge).test(11)); // true
+
+    int age2 = 11;
+    System.out.println(isAdult2.test(age2) && Predicate.not(isEvenAge).test(age2)); // false
+
 
 
 

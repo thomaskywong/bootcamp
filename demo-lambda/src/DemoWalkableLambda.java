@@ -1,3 +1,5 @@
+import lambda.Walkable;
+
 public class DemoWalkableLambda implements Walkable {
   @Override
   public void walk() {

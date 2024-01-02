@@ -1,6 +1,3 @@
-import Calculable;
-import Walkable;
-
 package lambda;
 public class DemoLambda {
     public static void main(String[] args) {
@@ -27,7 +24,7 @@ public class DemoLambda {
         // 6. For interface method with parameters, say (int x, int y), lambda expression becomes 
         //    InterfaceName obj = (a, b) -> { // implementation codes };
         // 7. Input parameter type can be neglected. No need to specified since only one method is available
-        // 8. Lambda express instantiate an object implementing interface without keyword "new"
+        // 8. Lambda express instantiate (or new) an object implementing interface without keyword "new"
         
 
         System.out.println("Lambda expression for no-parameter method:");
