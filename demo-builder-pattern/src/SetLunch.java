@@ -25,6 +25,7 @@ public class SetLunch {
     return "food=" + this.food + ", drink=" + this.drink;
   }
 
+  // Builder class
   public static class Builder {
 
     private Food food;
@@ -45,20 +46,5 @@ public class SetLunch {
     }
 
   }
-
-  public static void main(String[] args) {
-
-    SetLunch lunch1 = SetLunch.builder().food(Food.BEEF_RICE)
-        .drink(Drink.HOT_MILK_TEA).build();
-
-    System.out.println(lunch1);
-    System.out.println();
-
-    SetLunch lunch2 = SetLunch.builder().food(Food.FILET_FISH_PASTA)
-        .drink(Drink.ICE_COFFEE).build();
-
-    System.out.println(lunch2);
-    System.out.println();
-  }
-
+  
 }

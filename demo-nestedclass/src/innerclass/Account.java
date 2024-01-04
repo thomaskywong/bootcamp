@@ -49,13 +49,5 @@ public class AccountHolder {
 
   }
 
-  public static void main(String[] args) {
-
-
-
-    
-
-    
-  }
   
 }
