@@ -7,16 +7,25 @@
  * I can cook.
  */
 interface Driver {
-    public void drive(); // interface method
+    void drive(); // interface method
 }
 
 // Program an interface Cooker with cook method
+interface Cooker {
+    void cook();
+}
 
-class Father implements Driver {
+class Father implements Driver, Cooker {
     @Override
     public void drive() {
         System.out.println("I can drive.");
     }
+
+    @Override
+    public void cook() {
+        System.out.println("I can cook.");
+    }
+
 
 }
 

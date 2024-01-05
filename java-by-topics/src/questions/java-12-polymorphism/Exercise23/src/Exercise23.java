@@ -23,12 +23,26 @@ class Machine {
 class Computer extends Machine {
 
     // Implement Constructor
+    public Computer(String name) {
+        super(name);
+    }
 
     // Implement start() method
+    @Override
+    public void start() {
+        System.out.println("Start Computer: " + this.name);
+    }
 
     // Implement stop() method
+    @Override
+    public void stop() {
+        System.out.println("Start Computer: " + this.name);
+    }
 
     // Implement restart()
+    public void restart() {
+        //System.out.println("Restart Computer: " + this.name);
+    }
 }
 
 class Exercise23 {

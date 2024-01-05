@@ -17,7 +17,24 @@ import java.util.Map;
 class Exercise26 {
     // finite number of instances
     enum Fruit {
+
         // code here
+        APPLE(20),
+        STRAWBERRY(70),
+        ORANGE(50),
+        ;
+
+        private int price;
+
+        private Fruit(int price) {
+            this.price = price;
+        }
+
+        public int getPrice() {
+            return this.price;
+        }
+
+
     }
 
     public static void main(String[] args) {
@@ -35,9 +52,26 @@ class Exercise26 {
         // Iterate the map using
         // for-each loop
         // Iterating HashMap through for loop
+        System.out.println("Before change:"); 
         for (Map.Entry<Integer, String> set : foodTable.entrySet()) {
             // Printing all elements of a Map
             System.out.println(set.getKey() + " = " + set.getValue());
+        }
+        
+        HashMap<Integer, Fruit> foodTable2 = new HashMap<>();
+        
+        // Add elements using put method
+        foodTable2.put(1, Fruit.APPLE);
+        foodTable2.put(3, Fruit.STRAWBERRY);
+        foodTable2.put(2, Fruit.ORANGE);
+
+        // Remove elements 2
+        foodTable.remove(2);
+
+        System.out.println("After change:"); 
+        for (Map.Entry<Integer, Fruit> set : foodTable2.entrySet()) {
+            // Printing all elements of a Map
+            System.out.println(set.getKey() + " = " + set.getValue() + ", price = " + set.getValue().getPrice());
         }
     }
 }

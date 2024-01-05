@@ -21,12 +21,21 @@ abstract class B extends A {
     @Override
     void firstMethod() {
         System.out.println("FIRST");
-
     }
 }
 
 // Implement Class C to generate expected output
-class C {
+class C extends B{
+
+    @Override
+    void thirdMethod() {
+        System.out.println("ANOTHER METHOD");
+
+    }
+
+    void anotherMethod() {
+        thirdMethod();
+    }
     
 }
 

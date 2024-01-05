@@ -8,7 +8,9 @@ import java.util.function.*;
  * you passed in.
  */
 /**
- * Expected Output: Optional: Optional.empty it's throwing my Custom Expection
+ * Expected Output: 
+ * Optional: Optional.empty 
+ * it's throwing my Custom Expection
  */
 
 // Implement a custom exception class with a String Message Constructor.
@@ -18,16 +20,12 @@ public class Exercise38 {
 
         // create a Optional
         Optional<Integer> op = Optional.empty();
-        op.ifPresent(x -> System.out.println(x));
-        // op.orElseThrow(() -> new NoSuchElementException("Empty Optional Object!"));
-
-        op = Optional.of(op.orElse(300));
-        op.ifPresent(x -> System.out.println(x));
-
-        op = Optional.of(1000);
-        op.ifPresent(x -> System.out.println(x));
-
-
+        try{
+            op.orElseThrow(() -> new NoSuchElementException("Optional: Optional.empty"));
+        } catch (NoSuchElementException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("it's throwing my Custom Expection");
+        }
         // You can try assign an integer after you implemented orElseThrow()
         op = Optional.of(100);
 
@@ -38,22 +36,24 @@ public class Exercise38 {
         // If op is presented, print "op is Present: "
         // Use op.orElseThrow() to throw exception if op is not presented.
         op = Optional.empty();
-        //op = Optional.of(2000);
+        // op = Optional.of(2000);
 
         try {
-            op.orElseThrow(() -> new NoSuchElementException());
+            op.orElseThrow(() -> new NoSuchElementException("Optional: Optional.empty"));
         } catch (NoSuchElementException ex) {
-            System.out.println("Empty Optional object!");
-        } 
-        op.ifPresent(integer -> System.out.println("op is Present: " + integer));
-        
+            System.out.println(ex.getMessage());
+            System.out.println("it's throwing my Custom Expection");
+        } finally {
+            op.ifPresent(integer -> System.out.println("op is Present: " + integer));
+        }
 
         // orElseThrow - Provide supplier
         // Approach 2:
         try {
-            System.out.println("op is Present: " + op.orElseThrow(() -> new EmptyOptionalException())); // revise it
+            System.out.println("op is Present: " + op.orElseThrow(() -> new EmptyOptionalException("Optional: Optional.empty"))); // revise it
         } catch (EmptyOptionalException ex) {
-            System.out.println("Empty Optional object!!");
+            System.out.println(ex.getMessage());
+            System.out.println("it's throwing my Custom Expection");
         }
     }
 }

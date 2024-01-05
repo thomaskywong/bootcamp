@@ -26,7 +26,16 @@ class Exercise25 { // Linked List
     /* Inserts a new Node at front of the list. */
     public void push(int new_data) {
         // code here
-
+    
+        Node newNode = new Node(new_data);
+        if (this.head == null) {
+            //newNode.next = null;
+            this.head = newNode;
+            return;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;        
+        }
     }
 
     /*
@@ -39,31 +48,45 @@ class Exercise25 { // Linked List
          * 2. Put in the data
          * 3. Set next as null
          */
-        Node new_node = new Node(new_data);
+        Node newNode = new Node(new_data);
+        if (this.head == null) {
+            // newNode.next = null;
+            this.head = newNode;
+            return;
+        } else {
+            Node pointer = this.head;
+            while (pointer.next != null) {
+                pointer = pointer.next;
+            }
+            pointer.next = newNode;       
+        }
+
+        
 
         /*
          * 4. If the Linked List is empty, then make the
          * new node as head
          */
-        if (head == null) {
-            head = new Node(new_data);
-            return;
-        }
+        // if (head == null) {
+        //     head = new Node(new_data);
+        //     return;
+        // }
 
         /*
          * 4. This new node is going to be the last node, so
          * make next of it as null
          */
-        new_node.next = null;
+        // new_node.next is set as null already by Constructor
+        // new_node.next = null; 
 
         /* 5. Else traverse till the last node */
-        Node last = head;
-        while (last.next != null)
-            last = last.next;
+        // Node last = head;
+        // while (last.next != null)
+        //     last = last.next;
 
         /* 6. Change the next of last node */
-        last.next = new_node;
-        return;
+        // last.next = new_node;
+        // return;
     }
 
     /*
@@ -71,7 +94,15 @@ class Exercise25 { // Linked List
      * the given node
      */
     public void printList() {
-        
+        Node pointer = this.head;
+        System.out.print("[");
+        while (pointer != null) {
+            System.out.print(pointer.data);
+            if (pointer.next != null)
+                System.out.print(", ");
+            pointer = pointer.next;
+        }
+        System.out.println("]");
     }
 
     /*

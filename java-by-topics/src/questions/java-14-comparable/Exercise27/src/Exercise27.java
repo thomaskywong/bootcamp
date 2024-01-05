@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.Collections;
 
 /**
  * Execrise:
@@ -42,12 +43,15 @@ class Movie {
 // Driver class
 class Exercise27 {
     public static void main(String[] args) {
-        ArrayList<Movie> list = new ArrayList<Movie>();
+        List<Movie> list = new ArrayList<Movie>();
         list.add(new Movie("Star Wars", 8.7, 1977));
         list.add(new Movie("Force Awakens", 8.3, 2015));
         list.add(new Movie("Return of the Jedi", 8.4, 1983));
 
-        Collections.sort(list);
+
+        //Collections.sort(list, sortByName);
+        //Comparator<Movie> sortByName = (o1, o2) -> o2.getName().compareTo(o1.getName()) > 0 ? -1 : 1;
+        Collections.sort(list, new DescYearComparator());
 
         System.out.println("Movies after sorting: ");
         for (Movie movie : list) {

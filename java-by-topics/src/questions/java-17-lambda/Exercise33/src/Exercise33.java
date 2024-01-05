@@ -45,15 +45,15 @@ public class Exercise33 {
         Exercise33 tobj = new Exercise33();
 
         // Add two numbers using lambda expression
-        System.out.println("Addition is " + tobj.operate(4, 5, addition));
+        System.out.println("FunctionalInterface1: Addition is " + tobj.operate(4, 5, addition));
 
         // Multiply two numbers using lambda expression
-        System.out.println("Multiplication is " + tobj.operate(2, 9, multiplication));
+        System.out.println("FunctionalInterface1: Multiplication is " + tobj.operate(2, 9, multiplication));
 
         // lambda expression for single parameter
         // This expression implements FunctionalInterface2 interface
-        message.sayMessage("I'm learning Lambda Expression");
-        message.sayMessage("Yeah, I can use it now");
+        message.sayMessage("FunctionalInterface2: I'm learning Lambda Expression");
+        message.sayMessage("FunctionalInterface2: Yeah, I can use it now");
 
     }
 }

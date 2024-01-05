@@ -19,6 +19,17 @@ public class Exercise24 {
     // }
 
     // Code 3 doSomething() methods with same name, but with diff. parameter as signature
+    public void doSomething(String s) {
+        System.out.println("do " + s);
+    }
+
+    public void doSomething(int k){
+        System.out.println("do something " + k + " times.");   
+    }
+
+    public void doSomething(String s, int k){
+        System.out.println("do " + s + " " + k + " times.");   
+    }
 
     public void calculate(byte i) {
         System.out.println("calculate method byte: " + i);

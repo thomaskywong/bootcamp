@@ -54,7 +54,7 @@ class Exercise37Ans {
         // Optional<Integer> op2 = Optional.of(100);
 
         // print value op2
-        op2.ifPresentOrElse( x -> System.out.println("Optional op2: " + x), () -> System.out.println("Optional.empty"));
+        op2.ifPresentOrElse( x -> System.out.println("Optional op2: " + x), () -> System.out.println("Optional op2: Optional.empty"));
 
         // Convert Optional<Integer> to Integer
         // By using orElseGet() method to handle null scenario, by assigning random

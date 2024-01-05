@@ -6,9 +6,30 @@ interface Animal {
 }
 
 // Program a class Pig "implements" the Animal interface
+// public class Pig implements Animal {
+//     @Override
+//     public void sound() {
+//         System.out.println("Wee Wee");
+//     }
+
+//     @Override
+//     public void sleep() {
+//        System.out.println("Zzz Zzz"); 
+//     }
+// }
 
 // Program a Class Cat "implements" the Animal interface
+// public class Cat implements Animal {
+//     @Override
+//     public void sound() {
+//         System.out.println("Meow Meow");
+//     }
 
+//     @Override
+//     public void sleep() {
+//        System.out.println("Zzz"); 
+//     }
+// }
 /**
  * Expected Output:
  * Wee Wee

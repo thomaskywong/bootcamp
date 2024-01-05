@@ -17,6 +17,11 @@ enum Level {
     }
 
     // Program a method to print all enum level
+    public static void showValues() {
+        for (Level level : Level.values()) {
+            System.out.println(level.name());
+        }
+    }
     
 }
 

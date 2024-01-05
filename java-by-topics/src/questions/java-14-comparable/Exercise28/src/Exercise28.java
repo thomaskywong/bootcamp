@@ -5,6 +5,9 @@ import java.util.*;
  * Execrise:
  * Implement a Class DescYearComparator implements Comparator for Collections.sort use
  */
+
+
+
 /**
  * Movies after sorting:
  * Force Awakens 8.3 2015
@@ -41,14 +44,16 @@ class Movies {
 // Driver class
 class Exercise28 {
     public static void main(String[] args) {
-        ArrayList<Movies> movies = new ArrayList<>();
+        List<Movies> movies = new ArrayList<>();
         movies.add(new Movies("Force Awakens", 8.3, 2015));
         movies.add(new Movies("Star Wars", 8.7, 1977));
         movies.add(new Movies("Return of the Jedi", 8.4, 1983));
 
         // Moive implements Comparable, having comparable function
-        Collections.sort(movies, new DescYearComparator());
+        Comparator<Movies> sortByName = (m1, m2) -> m2.getName().compareTo(m1.getName()) > 0 ? -1 : 1;
 
+        Collections.sort(movies, sortByName);
+        
         System.out.println("Movies after sorting: ");
         for (Movies movie : movies) {
             System.out.println(movie.getName() + " " +

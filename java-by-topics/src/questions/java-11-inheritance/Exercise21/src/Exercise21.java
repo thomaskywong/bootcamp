@@ -5,20 +5,35 @@
  * Vehicle: Tuut, tuut, tuut!
  */
 class Vehicle {
-    protected String brand = "Tesla"; // Protected Vehicle attribute
+    protected String brand = "Tesla"; // Protected Vehicle attribute. Being public within the same package
 
     public void honk() { // Vehicle method
         System.out.println("Vehicle: Tuut, tuut, tuut!");
     }
-}
+
+    public String getBrand() {
+        return this.brand;
+    }
+ }
 
 // think about the relationship between Car and Vehicle
-class Car {
+class Car extends Vehicle {
     private String modelName = "ModelY"; // Car attribute
 
     // Implement the getModelname() and setModelName()
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
 
     // and something else
+    @Override
+    public void honk() { // Vehicle method
+        System.out.println("Car: Tuut, tuut, tuut!");
+    }
 
 }
 

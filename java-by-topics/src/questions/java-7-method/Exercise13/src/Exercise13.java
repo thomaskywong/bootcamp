@@ -5,6 +5,9 @@
  * Speed: 120, carModel: ModelX
  */
 public class Exercise13 {
+
+    // private int speed;
+    // private String carModel;
     
     // Create a fullThrottle() method
     public void fullThrottle() {
@@ -12,12 +15,17 @@ public class Exercise13 {
     }
 
     // Create a speed() method and add a parameter
-    public void printSpeed() {
-
+    public void printSpeed(int speed) {
+        //this.speed = speed;
+        //System.out.println(this.speed);
+        System.out.println("Speed: " + speed);
     }
 
     // Create method with same name, but with different parameters
-    public void printSpeed() {
+    public String printSpeed(int speed, String carModel) {
+        // this.speed = speed;
+        // this.carModel = carModel;
+        return "Speed: " + speed + ", carModel: " + carModel;
     }
 
     // Inside main, call the methods on the myCar object

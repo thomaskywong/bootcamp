@@ -1,12 +1,13 @@
 /**
- * Expected Output:
- * Static methods can be called without creating objects
+ * Expected Output: 
+ * Static methods can be called without creating objects 
  * Public methods must be called by creating objects
  */
 public class Exercise14 {
     // Static method
     static void myMethod() {
-        System.out.println("Static methods can be called without creating objects");
+        System.out.println(
+                "Static methods can be called without creating objects");
     }
 
     // instance method
@@ -18,11 +19,13 @@ public class Exercise14 {
     public static void main(String[] args) {
         // 1. Static method
         // Call the static method
+        myMethod();
 
         // 2. Instance Method
         // myPublicMethod(); This would compile an error, why?
-
         // Create an object of Exercise14
         // Call the public method on the object
+        Exercise14 caller = new Exercise14();
+        caller.anotherMethod();
     }
 }
