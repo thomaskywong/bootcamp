@@ -29,6 +29,7 @@ public class DemoInnerClass { // Outter class
 
     DemoInnerClass.Calculator c2 = new DemoInnerClass().new Calculator();
 
+    
 
   }
   

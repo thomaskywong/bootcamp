@@ -35,7 +35,7 @@ public class MembershipHolder {
   }
 
   // Demo inner class object accessing outer class member
-  public void demoInnerClass() {
+  public void demoInnerClassAccess() {
     this.membership.print();
   }
 

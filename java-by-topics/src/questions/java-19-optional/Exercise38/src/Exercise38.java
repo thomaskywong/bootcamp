@@ -1,4 +1,4 @@
-package Exercise38.src;
+// package Exercise38.src;
 
 import java.util.*;
 import java.util.function.*;
@@ -35,9 +35,11 @@ public class Exercise38 {
         // Implement try/catch block to catch custom exception
         // If op is presented, print "op is Present: "
         // Use op.orElseThrow() to throw exception if op is not presented.
-        op = Optional.empty();
-        // op = Optional.of(2000);
-
+        //op = Optional.empty();
+        op = Optional.of(2000);
+        // System.out.println();
+        System.out.println("Test orELseThrow");
+        
         try {
             op.orElseThrow(() -> new NoSuchElementException("Optional: Optional.empty"));
         } catch (NoSuchElementException ex) {
@@ -46,6 +48,8 @@ public class Exercise38 {
         } finally {
             op.ifPresent(integer -> System.out.println("op is Present: " + integer));
         }
+
+   
 
         // orElseThrow - Provide supplier
         // Approach 2:

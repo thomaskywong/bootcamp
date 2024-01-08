@@ -71,8 +71,8 @@ public class Student {
         // return new Student(this.name, this.age, this.subjects);
         // }
 
-        public Student build() {
-            return new Student(this);
+        public Student2 build() {
+            return new Student2(this);
         }
 
     }
@@ -80,11 +80,11 @@ public class Student {
     public static void main(String[] args) {
 
         // original way
-        Student student1 = new Student("Thomas", 44,
+        Student2 student1 = new Student2("Thomas", 44,
                 new ArrayList<>(List.of("Maths", "Physics", "English")));
 
         // builder way
-        Student student2 = new Builder()
+        Student2 student2 = new Builder()
                             .name("John").age(44)
                             .subjects(List.of("Maths", "English"))
                             .build();
@@ -94,7 +94,7 @@ public class Student {
         System.out.println(student2.getSubjects());
 
         // encapsulated builder
-        Student student3 = Student.builder()
+        Student2 student3 = Student2.builder()
                         .name("May")
                         .age(15)
                         .subjects(List.of("Maths", "Physics"))

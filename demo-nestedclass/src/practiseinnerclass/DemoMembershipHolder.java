@@ -13,7 +13,11 @@ public class DemoMembershipHolder {
     System.out.println(thomas2);
     System.out.println();
 
-    thomas.demoInnerClass();
+    thomas.demoInnerClassAccess();
+
+    // MembershipHolder.Membership membership1 = new MembershipHolder("Thomas"). new Membership();
+    // System.out.println(membership1.getMemberClass());
+    // membership1.print();
 
 
   }

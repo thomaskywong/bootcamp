@@ -1,13 +1,23 @@
-public class DemoStaticNestedClass {    // Outer class
+public class DemoStaticNestedClass { // Outer class
 
-    public static int score;
-    public static class Calculator {    // nested static class
+    public static int score = 100;
+    private int score2;
+
+    public DemoStaticNestedClass(int score2) {
+        this.score2 = score2;
+    }
+
+    public int getScore2() {
+        return this.score2;
+    }
+
+    public static class Calculator { // nested static class
 
         // attributes
         private int x;
 
         // constructor
-        public Calculator (int x) {
+        public Calculator(int x) {
             this.x = x;
         }
 
@@ -20,14 +30,14 @@ public class DemoStaticNestedClass {    // Outer class
             return this.x;
         }
 
+        public int scorePlusX() {
+            return this.x + DemoStaticNestedClass.score;
+        }
+
+        // public int score2PlusX() {
+        //     return this.x + super.score2;       // compilation error. cannot access outer class instance variable
+        // }
+
     }
 
-    public static void main(String[] args) {
-        DemoStaticNestedClass d = new DemoStaticNestedClass();
-        DemoStaticNestedClass.Calculator c = new DemoStaticNestedClass.Calculator();
-
-        Calculator calculator = new Calculator();
-
-
-    }
 }

@@ -51,5 +51,7 @@ public class DemoLambda {
         };
         System.out.println(product.compute(3,4));   // 12
 
+        
+
     }
 }

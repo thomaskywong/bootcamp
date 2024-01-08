@@ -1,10 +1,10 @@
-public class Calculator {
+public class Calculator2 {
 
   // attributes
   private int x;
 
   // constructor
-  public Calculator(int x) {
+  public Calculator2(int x) {
     this.x = x;
   }
 

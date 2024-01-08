@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class DemoOptional {
     public static void main(String[] args) {
@@ -81,11 +82,34 @@ public class DemoOptional {
         System.out.println(acct3);
         System.out.println();
 
-        System.out.println("T orElseThrow(Supplier <? extends Throwable> exceptionSupplier)");
+        System.out.println(
+                "T orElseThrow(Supplier <? extends Throwable> exceptionSupplier)");
         Account acct4 = accA.orElseThrow(() -> new NoSuchElementException());
         System.out.println(acct4);
-        //Account acct5 = accB.orElseThrow(() -> new NoSuchElementException());
+        // Account acct5 = accB.orElseThrow(() -> new NoSuchElementException());
+        
+        System.out.println();
+        System.out.println(accounts);
 
+        // Finds max value
+        OptionalDouble MaxBalance =
+                accounts.stream().mapToDouble(e -> e.getBalance()).max();
+        double max = 0.0d;
+        // if MaxBalance is not empty
+        if (MaxBalance.isPresent()) {
+            max = MaxBalance.getAsDouble(); // convert OptionalDouble to double
+        }
+        System.out.println(max);
+
+        // Finds min value
+        OptionalDouble MinBalance =
+                accounts.stream().mapToDouble(e -> e.getBalance()).min();
+        double min = 0.0d;
+        // if MaxBalance is not empty
+        if (MinBalance.isPresent()) {
+            min = MinBalance.getAsDouble(); // convert OptionalDouble to double
+        }
+        System.out.println(min);
 
 
 

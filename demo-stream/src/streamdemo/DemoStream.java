@@ -123,7 +123,8 @@ public class DemoStream {
                 System.out.println(customers);
                 System.out.println();
 
-
+                System.out.println();
+                System.out.println("flatMap()");
                 // Retrieve all addresses from a list of customers
                 List<Customer.Address> addresses = customers.stream()
                                 .flatMap(c -> c.getAddresses().stream()) // [..., ..., ...] from Stream<Customer> to Stream<Address>
