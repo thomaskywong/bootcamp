@@ -3,7 +3,8 @@ public class Calculator {
   int x;
 
   // Multi-thread environment encounter atomic problem (read-write issue on share resource)
-  // 
+  // One of the approaches to solve is "synchronized"
+  // When a thead accessing
 
   public synchronized void increment() {
     this.x++;
@@ -79,6 +80,8 @@ public class Calculator {
     System.out.println("Non-synchroized method by multi thread");
     System.out.println("calculator.x=" + calculator.x);
 
+    calculator.x = 0;
+
     // Example 3: Synchronized methods (multiple methods being synchronized)
     Thread vincent3 = new Thread(() -> {
       for (int i= 0; i < 100_000; i++) {
@@ -91,8 +94,6 @@ public class Calculator {
         calculator.decrement();
       }
     });
-
-    calculator.x = 0;
     
     vincent3.start();
     oscar3.start();
