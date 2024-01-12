@@ -204,7 +204,7 @@ FROM employees e, haanDate h
 WHERE DATEDIFF(e.hire_date, h.hire_date) > 0; 
 
 -- QUESTION 8:
-SELECT d.department_id, count(1) AS num_of_employee
+SELECT d.department_name, count(1) AS num_of_employee
 FROM employees e, departments d
 WHERE e.department_id = d.department_id
 GROUP BY d.department_id
@@ -229,7 +229,7 @@ SELECT d.manager_id, d.department_name, c.city, c.country_name
 FROM departments d, countryName c
 WHERE d.location_id = c.location_id
 )
-SELECT m.department_name, CONCAT(e.first_name, ' ', e.last_name) AS manager_name, m.city, m.country_name 
+SELECT m.department_name, COALESCE(CONCAT(e.first_name, ' ', e.last_name), 'N/A') AS manager_name, m.city, m.country_name 
 FROM managerID m LEFT JOIN employees e
 ON m.manager_id = e.employee_id
 ;
