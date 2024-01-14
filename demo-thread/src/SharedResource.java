@@ -15,39 +15,39 @@ public class SharedResource {
 
   // If nothing, produce(0)
   public synchronized void produce() throws InterruptedException {
-    System.out.println("Producer starts.");
+    // System.out.println("Producer starts.");
     while (hasData) {
-      System.out.println("Producer wait.");
-      System.out.println();
+    //   System.out.println("Producer wait.");
+    //   System.out.println();
       wait(); // wait until notify being received
     }
-    System.out.print("Thread Id = " + Thread.currentThread().getId());
-    System.out.println(", Thread name = " + Thread.currentThread().getName());
-    System.out.println("Producing data...");
+    // System.out.print("Thread Id = " + Thread.currentThread().getId());
+    // System.out.println(", Thread name = " + Thread.currentThread().getName());
+    // System.out.println("Producing data...");
     Thread.sleep(2000);
     hasData = true;
-    System.out.println("Data produced.");
+    // System.out.println("Data produced.");
     notify(); // notify consumer thread to proceed
-    System.out.println("Producer ends.");
+    // System.out.println("Producer ends.");
   }
 
   // if something, consume()
   // if hasData -> does not consume()
   public synchronized void consume() throws InterruptedException {
-    System.out.println("Consumer starts.");
+    // System.out.println("Consumer starts.");
     while (!hasData) {
-      System.out.println("Consumer wait.");
-      System.out.println();
+      // System.out.println("Consumer wait.");
+      // System.out.println();
       wait(); // wait until notify being received
     }
-    System.out.print("Thread Id = " + Thread.currentThread().getId());
-    System.out.println(", Thread name = " + Thread.currentThread().getName());
-    System.out.println("Consuming data...");
+    // System.out.print("Thread Id = " + Thread.currentThread().getId());
+    // System.out.println(", Thread name = " + Thread.currentThread().getName());
+    // System.out.println("Consuming data...");
     Thread.sleep(2000);
     hasData = false;
-    System.out.println("Data consumed.");
+    // System.out.println("Data consumed.");
     notify(); // notify producer thread to proceed
-    System.out.println("Consumer ends.");
+    // System.out.println("Consumer ends.");
   }
 
   public static void main(String[] args) {

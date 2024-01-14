@@ -248,16 +248,16 @@ GROUP BY e.department_id
 -- set 'grade_level of 'jobs' as 'FOREIGN KEY' that 'REFERENCES' to 'grade_level' in 'job_grades' table
 -- REMARK: Should avoid removing any column from any table once the database is being used by users
 
--- CREATE TABLE job_grades (
--- 	grade_level VARCHAR(2) PRIMARY KEY,
---     lowest_sal DECIMAL(8,2),
---     highest_sal DECIMAL(8,2)
--- )
--- ;
+CREATE TABLE job_grades (
+	grade_level VARCHAR(2) PRIMARY KEY,
+    lowest_sal DECIMAL(8,2),
+    highest_sal DECIMAL(8,2)
+)
+;
 
--- ALTER TABLE jobs DROP min_salary;
--- ALTER TABLE jobs DROP max_salary;
--- ALTER TABLE jobs ADD grade_level VARCHAR(2);
--- ALTER TABLE jobs ADD FOREIGN KEY (grade_level) REFERENCES job_grades (grade_level);
+ALTER TABLE jobs DROP min_salary;
+ALTER TABLE jobs DROP max_salary;
+ALTER TABLE jobs ADD grade_level VARCHAR(2);
+ALTER TABLE jobs ADD CONSTRAINT fk_grade_level FOREIGN KEY (grade_level) REFERENCES job_grades (grade_level);
 
 
