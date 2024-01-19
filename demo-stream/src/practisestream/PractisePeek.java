@@ -25,7 +25,7 @@ public class PractisePeek {
     
     System.out.println(students);
     System.out.println();
-
+    
     students.stream().filter( e -> e.getId() > 1005 )
                      .sorted(Comparator.comparing(Student02::getId))
                      .peek( e -> System.out.println("filered: " + e.getId()))

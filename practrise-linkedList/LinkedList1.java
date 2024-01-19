@@ -2,6 +2,7 @@ import java.util.Deque;
 import java.util.Queue;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Collectors;
 
 public class LinkedList1 {
 
@@ -121,6 +122,8 @@ public class LinkedList1 {
     System.out.println(ll2);
     System.out.println(ll2.remove());
     System.out.println(ll2);
+
+  
 
   }
 
