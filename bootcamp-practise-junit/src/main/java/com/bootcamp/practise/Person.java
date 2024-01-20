@@ -1,13 +1,25 @@
 package com.bootcamp.practise;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import java.time.LocalDate;
+
+import lombok.ToString;
+import lombok.EqualsAndHashCode;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.Getter;
+import lombok.NonNull;
+
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@RequiredArgsConstructor
+
+public class Person 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+    @NonNull
+    private String firstName;
+    private String lastName;
+    private final LocalDate birthday;
+
 }
