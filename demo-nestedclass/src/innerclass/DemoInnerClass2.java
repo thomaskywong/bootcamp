@@ -1,3 +1,5 @@
+package innerclass;
+
 import java.util.Arrays;
 public class DemoInnerClass2 {
   

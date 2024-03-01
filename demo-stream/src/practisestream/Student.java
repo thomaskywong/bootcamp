@@ -1,5 +1,3 @@
-package practisestream;
-
 import java.util.Objects;
 
 public class Student {

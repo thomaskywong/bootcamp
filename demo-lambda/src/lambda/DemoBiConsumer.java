@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
+
 public class DemoBiConsumer {
 
   public static void main(String[] args) {

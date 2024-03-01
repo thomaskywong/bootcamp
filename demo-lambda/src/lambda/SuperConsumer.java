@@ -1,5 +1,3 @@
-package lambda;
-
 // T, U V could be the same types or different types
 @FunctionalInterface
 public interface SuperConsumer<T, U, V> {

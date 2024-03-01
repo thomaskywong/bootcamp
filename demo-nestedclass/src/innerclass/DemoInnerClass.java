@@ -1,3 +1,5 @@
+package innerclass;
+
 public class DemoInnerClass { // Outter class
 
   // private Calculator calculator;

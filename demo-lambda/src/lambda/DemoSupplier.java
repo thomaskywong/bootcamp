@@ -1,5 +1,3 @@
-package lambda;
-
 import java.util.Random;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;

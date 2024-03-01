@@ -1,4 +1,4 @@
-package practiseconfinement;
+package src.practiseconfinement;
 
 public class DownloadFile {
   

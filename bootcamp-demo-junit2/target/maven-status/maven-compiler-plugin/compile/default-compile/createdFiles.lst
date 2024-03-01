@@ -13,6 +13,7 @@ com\vtxlab\bootcamp\lomboks\Staff.class
 com\vtxlab\bootcamp\lomboks\Person.class
 com\vtxlab\bootcamp\lomboks\Square.class
 com\vtxlab\bootcamp\lomboks\Staff$StaffBuilder.class
+com\vtxlab\bootcamp\lomboks\Order.class
 com\vtxlab\bootcamp\lomboks\Person$PersonBuilder.class
 com\vtxlab\bootcamp\lomboks\Square$SquareBuilder.class
 com\vtxlab\bootcamp\lomboks\Developer$DeveloperBuilder.class

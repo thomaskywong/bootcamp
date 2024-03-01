@@ -1,4 +1,3 @@
-package practisestream;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,6 +48,12 @@ public class PractiseCollectors {
 
     // .collect( Collectors.summarizingInt( Student::getId))
     System.out.println(students.stream().collect(Collectors.summarizingInt(Student02::getId)));
+
+
+    System.out.println("\nEmpty List by Collectors.toList()");
+    List<Student02> studentslist2 = students.stream().filter(e -> e.getName().equals("Tim")).collect(Collectors.toList());
+    System.out.println(studentslist2);
+
 
   }
 

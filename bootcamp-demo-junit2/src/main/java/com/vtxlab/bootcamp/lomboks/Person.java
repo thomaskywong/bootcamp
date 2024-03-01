@@ -26,7 +26,8 @@ public class Person {
   private String name;
   
   private int age;
- 
+  
+  // @AllArgsConstructor included
   // public Person(String name, int age) {
   //   this.name = name;
   //   this.age = age;
@@ -46,6 +47,40 @@ public class Person {
   // public void setAge(int age) {
   //   this.age = age;
   // }
+
+  public boolean isElderly() {
+    return age >= 65;
+  }
+
+  public static Person of(String name, int age) {
+    if (name == null || age < 0)
+      return null;
+
+    return new Person(name, age);
+  }
+
+  public static String concat(String s1, String s2) {
+    if (s1 != null && s2 == null) 
+      return s1;
+    if (s1 == null && s2 != null)
+      return s2;
+    if (s1 == null && s2 == null) 
+      return null;
+
+    return s1.concat(s2);
+  }
+
+  public static String concat2(String s1, String s2) {
+    if (s1 != null && s2 == null) 
+      return s1;
+    if (s1 == null && s2 != null)
+      return s2;
+    if (s1 == null && s2 == null) 
+      throw new IllegalArgumentException();
+
+    return s1.concat(s2);
+  }
+
   
   public static void main(String[] args) {
     

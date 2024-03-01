@@ -1,4 +1,4 @@
-package practiseconfinement;
+package src.practiseconfinement;
 
 import java.util.List;
 import java.util.Random;

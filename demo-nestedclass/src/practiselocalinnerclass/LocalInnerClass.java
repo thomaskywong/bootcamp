@@ -1,3 +1,5 @@
+package practiselocalinnerclass;
+
 public class LocalInnerClass {
 
   public static void main(String[] args) {

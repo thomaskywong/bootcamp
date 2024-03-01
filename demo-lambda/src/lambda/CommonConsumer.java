@@ -1,4 +1,3 @@
-package lambda;
 
 public interface CommonConsumer<T> extends SuperConsumer<T, T, T> {
 

@@ -1,4 +1,4 @@
-package practiseinterrupt;
+// package practiseinterrupt;
 
 public class SharedData {
 
